@@ -18,7 +18,7 @@ businessesRouter.get('/:id', async (request, response) => {
 businessesRouter.post('/', async (request, response) => {
   try {
     const { body } = request
-    const { email, name, password, profileImg } = body
+    const { email, name, password, profileImg, currency = 'EUR' } = body
 
     const saltRounds = 10 // coste de generar el hash, mientras mas alto mas seguro
     const passwordHash = await bcrypt.hash(password, saltRounds)
@@ -32,6 +32,7 @@ businessesRouter.post('/', async (request, response) => {
         passwordHash,
         profileImg,
         status: 'active',
+        currency,
         creationDate: new Date().toISOString()
       })
 
@@ -57,6 +58,7 @@ businessesRouter.post('/', async (request, response) => {
         orders: savedBusiness.orders,
         items: savedBusiness.items,
         status: savedBusiness.status,
+        currency: savedBusiness.currency,
         id: savedBusiness._id,
         token
       }

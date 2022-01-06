@@ -1,7 +1,7 @@
 import propTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
-import { userRegister } from '../reducers/userReducer'
+import { businessRegister } from '../reducers/businessReducer'
 import Notification from './Notification'
 
 import { useHistory } from 'react-router-dom'
@@ -25,7 +25,7 @@ export default function RegistrationForm () {
     event.preventDefault()
 
     try {
-      dispatch(userRegister({ email, password, name, surname, profileImg }))
+      dispatch(businessRegister({ email, password, name, surname, profileImg }))
       setEmail('')
       setPassword('')
       setName('')

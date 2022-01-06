@@ -2,12 +2,11 @@ const { Schema, model } = require('mongoose')
 
 const itemSchema = new Schema({
   title: String,
-  description: String, // En un futuro metemos aqui otro modelo que seria el contrato
   image: String,
   creationDate: Date,
   status: String,
   price: Number,
-  currency: String,
+  category: String,
   business: {
     type: Schema.Types.ObjectId,
     ref: 'Business'

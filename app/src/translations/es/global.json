@@ -41,23 +41,18 @@
         "dont_have_account": "¿No tienes cuenta? ",
         "sign_up": "Regístrate"
     },
-    "agreements_page": {
-        "agreements": "Contratos",
-        "new_deal": "Nuevo Contrato",
-        "title": "Título",
-        "user": "Usuario",
-        "creation_date": "Fecha de Creación",
-        "signed": "Firmado",
-        "status": "Estado",
-        "no_deals": "No hay contratos añadidos"
+    "items": {
+        "menu": "Carta",
+        "new_deal": "Nuevo Item",
+        "no_items": "No hay items añadidos"
     },
     "deal": {
         "signed": "Firmado",
         "not_signed": "No Firmado"
     },
     "header": {
-        "agreements": "Contratos",
-        "users": "Usuarios",
+        "menu": "Carta",
+        "orders": "Comandas",
         "profile": "Perfil"   
     },
     "users_page": {

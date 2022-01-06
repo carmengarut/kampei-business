@@ -44,11 +44,11 @@ itemsRouter.delete('/:id', userExtractor, async (request, response, next) => {
 })
 
 itemsRouter.post('/', userExtractor, async (request, response, next) => {
-  const { title, description, price, currency = 'EUR' } = request.body
+  const { title, image, category, price } = request.body
 
-  if (!title || !description || !price) {
+  if (!title || !category || !price) {
     return response.status(400).json({
-      error: 'Item description is missing'
+      error: 'Item property is missing'
     })
   }
 
@@ -62,9 +62,9 @@ itemsRouter.post('/', userExtractor, async (request, response, next) => {
 
   const newItem = new Item({
     title,
-    description,
+    image,
+    category,
     price,
-    currency,
     creationDate: new Date().toISOString(),
     status: 'active',
     business: business._id

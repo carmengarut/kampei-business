@@ -1,107 +1,125 @@
-.Header {
+
+.h-container {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    background: #ffffff;
-    box-shadow: 0px 7px 20px rgba(40, 41, 61, 0.08);
-
-    padding: 20px 0px;
-    width: 60px;
     position: fixed;
-    height: 100%;
     overflow: auto;
+
+    width: 60px;
+    height: 100%;
+    padding: 20px 0px;
+
+    box-shadow: 0px 7px 20px rgba(40, 41, 61, 0.08);
 }
 
-.HeaderLogo {
-    cursor:pointer; 
+.h-logo {
+    cursor: pointer; 
 }
 
-.Section {
+.h-menu {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.h-menu-section {
     margin-top: 30px;
-    cursor:pointer;
+
+    cursor: pointer;
 }
 
-.ToggleSectionTitle {
+.h-menu-section-title {
     display: none;
+
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 13px;
     line-height: 16px;
+    color: #1F1F24;
 }
 
-.MenuButton {
+.h-menu-button {
     display: none;
 }
 
-.ProfileSection{
+.h-menu-profile-section{
     position: absolute;
     bottom: 20px;
     left: 10px;
+
     cursor:pointer;
 }
 
 @media (max-width: 800px) {
-    .Header {
+    .h-container {
         overflow: hidden;
         flex-direction: row;
         justify-content: space-between;
+
         width: 100%;
         height: 60px;
         padding: 0 15px;
+
+   
     }
 
-
-    .ToggleSection{
-        display: none;
-    }
-
-    .MenuButton { 
+    .h-menu-button { 
         display: inline-block;
+
         margin-right: 10px;
-        cursor:pointer;
+
+        cursor: pointer;
     }
 
-    .ToggleSection {
-        background: #fff !important;
-        box-shadow: 0px 20px 50px rgba(18, 17, 39, 0.08);
-        border-radius: 12px;
+    .h-menu-toggle {
+        display: none;
+
         position: fixed;
         top: 45px;
         right: 10px;
 
         padding: 0 10px;
+
+        box-shadow: 0px 20px 50px rgba(18, 17, 39, 0.08);
+        border-radius: 12px;
+
+        background: #fff !important;
     }
 
-    .Block:hover .ToggleSection{
+    .h-menu-container:hover .h-menu-toggle{
         display: -webkit-flex;
         display: flex;
         flex-direction: column;
       }
 
-    .ToggleSectionTitle {
+    .h-menu-section-title {
         display: inline-block;
     }
 
-    .Section {
+    .h-menu-section {
         padding: 10px;
         margin: 0;
         border-bottom: 1px solid rgba(18, 17, 39, 0.12);
     }
 
-    .ProfileSection {
+    .h-menu-profile-section {
         position: static;
         padding: 10px;
     }
 
-    .SectionIcon { 
+    .h-menu-section-icon { 
         height: 20px;
         width: 20px;
         margin-right: 10px;
     }
-    .ProfileIcon { 
+
+    .h-menu-profile-icon { 
         height: 20px;
         width: 20px;
         margin-right: 10px;

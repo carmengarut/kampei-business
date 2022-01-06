@@ -8,6 +8,7 @@ const businessSchema = new Schema({
   profileImg: String,
   creationDate: Date,
   status: String,
+  currency: String,
   items: [{
     type: Schema.Types.ObjectId,
     ref: 'Item'

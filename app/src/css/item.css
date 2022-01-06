@@ -1,0 +1,98 @@
+.TableRow {
+
+    display: -webkit-flex;
+    display: flex;
+    
+    align-items: center;
+
+    box-shadow: 0px 7px 20px rgba(40, 41, 61, 0.08);
+    border-radius: 8px;
+    height: 85px;
+    padding: 40px 0px;
+    margin: 10px 0px;
+    background: #FFFFFF;
+}
+
+.TableRow:hover {
+    cursor: pointer;
+    background: rgba(225, 245, 255, 0.2);
+}
+
+.ColumnMemberTitle {
+
+    margin: 0 20px 0 50px;
+
+    width: 35%;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 19px;
+    /* identical to box height */
+
+
+    /* Grey/500 */
+
+    color: #3A3C40;
+  
+}
+
+.ColumnMember {
+    width: 50%;
+    margin: 0px 5px 0px 0px;
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    /* identical to box height */
+
+
+    /* Grey/400 */
+
+    color: #82868C;
+
+
+}
+
+@media (max-width: 800px) {
+    
+    .TableRow { 
+        flex-direction: column;
+        align-items: flex-start;
+        height: 160px;
+        padding: 30px;
+        margin-top: 0px;
+    }
+
+    .ColumnMemberTitle {
+        width: 100%;
+        margin-left: 0px;
+    }
+
+    .ColumnMember {
+        width: 100%;
+        margin-left: 0px;
+        margin-top: 20px;
+    }
+
+    .Avatar { 
+        background: #FFFFFF;
+        margin-right: 5px;
+    }
+
+    
+
+}
+
+@media (max-width: 325px) {
+
+   
+    .TableRow { 
+        padding: 20px 20px;
+        height: 140px;
+
+    }
+
+}

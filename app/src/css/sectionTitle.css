@@ -1,4 +1,4 @@
-.SectionTitleContainer {
+.st-container {
     display: -webkit-flex;
     display: flex;
     align-items: center;
@@ -6,7 +6,7 @@
     margin: 10px 10px 30px 10px;
 }
 
-.SectionTitle {
+.st-title {
     margin-left: 10px;
     margin-bottom: 0px;
 
@@ -14,12 +14,11 @@
     font-style: normal;
     font-weight: bold;
     font-size: 21px;
-
     color: #283252;
 }
 
 @media (max-width: 800px) {
-    .SectionTitleContainer {
+    .st-container {
         margin: 0px;
     }
 }

@@ -41,23 +41,18 @@
         "dont_have_account": "Don't have an account? ",
         "sign_up": "Sign Up"
     },
-    "agreements_page": {
-        "agreements": "Contracts",
-        "new_deal": "New Contract",
-        "title": "Title",
-        "user": "User",
-        "creation_date": "Creation Date",
-        "signed": "Signed",
-        "status": "Status",
-        "no_deals": "No contracts added"
+    "items": {
+        "menu": "Menu",
+        "new_item": "New Item",
+        "no_items": "No items added"
     },
     "deal": {
         "signed": "Signed",
         "not_signed": "Not Signed"
     },
     "header": {
-        "agreements": "Contracts",
-        "users": "Users",
+        "menu": "Menu",
+        "orders": "Orders",
         "profile": "Profile"   
     },
     "users_page": {

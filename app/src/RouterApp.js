@@ -12,7 +12,7 @@ import Items from './Items'
 import ItemForm from './components/ItemForm'
 
 export default function RouterApp () {
-  const user = useSelector(state => state.user)
+  const business = useSelector(state => state.business)
 
   return (
 
@@ -47,13 +47,13 @@ export default function RouterApp () {
 
       <Route
         path='/login' render={() => {
-          return user.email ? <Redirect to='/' /> : <LoginForm />
+          return business.email ? <Redirect to='/' /> : <LoginForm />
         }}
       />
 
       <Route
         path='/register' render={() => {
-          return user.email ? <Redirect to='/' /> : <RegistrationForm />
+          return business.email ? <Redirect to='/' /> : <RegistrationForm />
         }}
       />
 

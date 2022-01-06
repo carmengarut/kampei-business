@@ -2,13 +2,13 @@
 import propTypes from 'prop-types'
 import { useDispatch } from 'react-redux'
 import { useState } from 'react'
-import { userLogin } from '../reducers/userReducer'
 import Notification from './Notification'
 import { useHistory } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 
 import logo from '../public/logo-header.svg'
 import '../css/loginForm.css'
+import { businessLogin } from '../reducers/businessReducer'
 
 export default function LoginForm () {
   const [email, setEmail] = useState('')
@@ -20,7 +20,7 @@ export default function LoginForm () {
 
   const handleLogin = (event) => {
     event.preventDefault()
-    dispatch(userLogin({ email, password }))
+    dispatch(businessLogin({ email, password }))
     setEmail('')
     setPassword('')
   }

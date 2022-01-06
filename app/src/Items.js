@@ -6,7 +6,7 @@ import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 
-import addContractIcon from './public/add-contract-icon.svg'
+import addItemIcon from './public/add-item-icon.svg'
 
 import './css/items.css'
 
@@ -22,31 +22,20 @@ function Items () {
   return (
     <div className='i-container'>
       <SectionTitle>
-        {t('agreements_page.agreements')}
+        {t('items.menu')}
       </SectionTitle>
       <Notification />
       <div className='i-button-container'>
-        <button onClick={() => history.push('/create-item')} className='Button'>{t('agreements_page.new_deal')}</button>
+        <button onClick={() => history.push('/create-item')} className='i-button'>{t('items.new_item')}</button>
       </div>
 
-      <div className='i-table-header'>
-        <div className='ColumnTitleDeal'>{t('agreements_page.title')}</div>
-        <div className='Columns2TitleContainer'>
-          <div className='ColumnTitle'>{t('agreements_page.user')}</div>
-          <div className='ColumnTitle'>{t('agreements_page.creation_date')}</div>
-        </div>
-        <div className='BatchesTitleContainer'>
-          <div className='ColumnTitle'>{t('agreements_page.signed')}</div>
-          <div className='ColumnTitle'>{t('agreements_page.status')}</div>
-        </div>
-      </div>
       {items.filter(item => {
-        if (item.createdBy.id) return (item.createdBy.id === business.id || item.member.id === business.id)
-        return (item.createdBy === business.id || item.member.id === business.id)
+        if (item.business.id) return item.business.id === business.id
+        return item.business === business.id
       }).length > 0
         ? items.filter(item => {
-            if (item.createdBy.id) return (item.createdBy.id === business.id || item.member.id === business.id)
-            return (item.createdBy === business.id || item.member.id === business.id)
+            if (item.business.id) return item.business.id === business.id
+            return item.business === business.id
           }).map((item, i) =>
             <Item
               key={i}
@@ -54,15 +43,15 @@ function Items () {
             />
           )
         : (
-          <div className='D-no-deals-container'>
+          <div className='i-no-items-container'>
             <img
               alt=''
-              src={addContractIcon}
+              src={addItemIcon}
               width='100'
               height='100'
             />
-            <div className='D-no-deals-text'>{t('agreements_page.no_deals')}</div>
-            <button onClick={() => history.push('/create-item')} className='Button'>{t('agreements_page.new_deal')}</button>
+            <div className='i-no-items-text'>{t('items.no_items')}</div>
+            <button onClick={() => history.push('/create-item')} className='i-button'>{t('items.new_item')}</button>
           </div>)}
     </div>
   )
