@@ -1,0 +1,286 @@
+@import url('./fonts.css');
+
+* {
+    background: #1F1F24;
+}
+
+.lp-container {
+    padding: 0 60px;
+}
+
+.lp-heading-block {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+    max-width: 1300px;
+    margin: auto;
+
+    margin-bottom: 40px;
+}
+
+
+
+.lp-heading-block-left {
+    margin-top: 50px;
+}
+
+.lp-heading-block-right {
+    display: inline-block;
+}
+
+.lp-h1 {
+    width: 100%;
+    min-width: 450px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 140%;
+
+    color: #FFFFFF;
+}
+
+.lp-h2 {
+    width: 100%;
+    margin-bottom: 30px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 180%;  
+    
+    color: #FFFFFF;
+}
+
+
+
+.lp-call-to-action-left {
+    display: inline-block;
+
+    width: 40%;
+    height: 45px;
+    margin-top: 10px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+    
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+}
+
+.lp-call-to-action-right {
+    display: inline-block;
+
+    width: 40%;
+    height: 45px;
+    margin-left: 30px;
+    margin-top: 10px;
+
+    border: 2px solid #8B5CF6;
+    border-radius: 8px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    color: #FFFFFF;
+
+    background: #8B5CF6;
+
+}
+
+.lp-boxes-container {
+    display: -webkit-flex;
+    display: flex;
+    justify-content: center;
+
+    max-width: 1300px;
+    margin: auto;
+}
+
+
+.lp-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    width: 30%;
+    padding: 40px 24px;
+    margin-right: 25px;
+    margin-bottom: 25px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 20px;
+}
+    
+
+.lp-box-title {
+    margin: 25px 0px;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.lp-box-text {
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    color: #fff;
+ 
+}
+
+footer {
+    padding: 40px 20px;
+    margin-top: 40px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 180%;
+    color: rgba(255, 255, 255, 0.56);
+}
+
+.lp-footer-container{
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    max-width: 1300px;
+    margin: auto;
+}
+
+.lp-footer-logo {
+    margin-right: 10px;
+}
+
+@media (max-width: 1000px) {
+    .lp-heading-block {
+      flex-direction: column;
+      align-items: center;
+      justify-content: none;
+    }
+
+    .lp-heading-block-left {
+        flex: 100%;
+        text-align: center;
+    }
+
+    .lp-heading-block-right {
+        flex: 100%;
+        text-align: center;
+        margin-top: 30px;
+
+    }
+
+    .lp-boxes-container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    .lp-box {
+        width: 45%;
+    }
+
+    footer {
+        padding: 30px 10px;
+        margin-top: 20px;
+    }
+    
+    .lp-footer-container {
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    
+}
+
+@media (max-width: 800px) {
+    .lp-box {
+        margin-right: 0px;
+        width: 100%;
+    }
+     
+}
+
+@media (max-width: 415px) {
+    .lp-container { 
+        padding: 20px 10px;    
+    }
+
+    .lp-heading-block-right {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    .lp-heading-block-left {
+        width: 100%;
+        margin-top: 0px;
+    }
+
+    .lp-h1{
+        display: flex;
+        width: 100%;
+        min-width: 0px;
+        font-size: 40px;
+    }
+
+    .lp-h2{
+        display: flex;
+        width: 100%;
+        font-size: 20px;
+    }
+}
+
+
+@media (max-width: 290px) {
+    .lp-footer-container {
+      justify-content: center;
+    }  
+}
+
+@media (max-width: 285px) {
+    .lp-call-to-action-left, .lp-call-to-action-right {
+        width: 45%;
+    }
+
+    .lp-call-to-action-right {
+        margin-left: 12px;
+    }
+     
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

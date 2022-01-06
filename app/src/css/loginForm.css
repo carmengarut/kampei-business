@@ -1,0 +1,102 @@
+.lf-container {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    color: #FFFFFF;
+}
+
+.lf-box {
+    margin: 20px;
+    padding: 40px;
+
+    border: 2px solid #FFFFFF;
+    border-radius: 12px;
+}
+
+.lf-title {
+    text-align: center;
+
+    margin-bottom: 30px;
+
+    font-family: Poppins;
+    font-style: bold;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 42px;
+    color: #FFFFFF;
+}
+
+.lf-field-group {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+
+    width: 100%;
+    margin: 20px 0px;
+
+  
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 21px;
+    color: #fff;
+}
+
+
+.lf-field {
+    height: 46px;
+    margin-top: 10px;
+    padding-left: 13px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: #FFFFFF;
+}
+
+.lf-button {
+    width: 100%;
+    margin: 30px 0px;
+    padding: 10px 20px;
+
+    border-radius: 8px;
+    border: none;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 27px;
+    color: #FFFFFF;
+
+    background: #8B5CF6;
+}
+
+.lf-link {
+    color: #8B5CF6;
+}
+
+@media (max-width: 420px) {
+
+    .lf-box {
+        margin: 20px 20px 20px 20px;
+        padding: 0px;
+        
+        border-radius: 0px;
+        border: none;
+   
+    }
+
+    .lf-button {
+        margin-top: 10px;
+    }
+
+    .lf-title {
+        margin-bottom: 0px;
+    }
+}
