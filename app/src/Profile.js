@@ -4,27 +4,27 @@ import { useTranslation } from 'react-i18next'
 
 import SectionTitle from './components/SectionTitle'
 
-import { userEdit, userLogout } from './reducers/userReducer'
+import { businessEdit, businessLogout } from './reducers/businessReducer'
 
 import avatar from './public/avatar.svg'
 import './css/profile.css'
 
 const Profile = () => {
-  const user = useSelector(state => state.user)
-  const [name, setName] = useState(user.name || '')
-  const [surname, setSurname] = useState(user.surname || '')
-  const [email, setEmail] = useState(user.email || '')
+  const business = useSelector(state => state.business)
+  const [name, setName] = useState(business.name || '')
+  const [surname, setSurname] = useState(business.surname || '')
+  const [email, setEmail] = useState(business.email || '')
   const dispatch = useDispatch()
   const { t } = useTranslation('global')
 
   return (
-    <div className='ProfileContainer'>
+    <div className='p-container'>
       <SectionTitle>
         {t('profile_page.profile')}
       </SectionTitle>
-      <div className='ProfileCard'>
+      <div className='p-box'>
         <div>{t('profile_page.edit_your_account_info')}</div>
-        <div className='ProfileSubcontainer1'>
+        <div className='p-name-block'>
           <img
             style={{
               width: '100px',
@@ -32,23 +32,23 @@ const Profile = () => {
               resizeMode: 'contain',
               borderRadius: '50%'
             }}
-            src={user.profileImg || avatar}
-            alt={user.name}
+            src={business.profileImg || avatar}
+            alt={business.name}
           />
 
-          <div className='ProfileName'>{user.name} {user.surname} {' '}
-            <span className='ProfileTrustRate'>{user.trustRate} % trust</span>
+          <div className='p-name'>
+            {business.name} {business.surname}
           </div>
         </div>
 
         <form
-          className='ProfileForm'
+          className='p-form'
         >
-          <div className='ProfileRow1'>
-            <div className='ProfileFieldGroup'>
+          <div className='p-form-row-1'>
+            <div className='p-field-group'>
               <label>{t('profile_page.name')}</label>
               <input
-                className='Field'
+                className='p-field'
                 type='text'
                 value={name}
                 name='Name'
@@ -56,10 +56,10 @@ const Profile = () => {
                 onChange={({ target }) => setName(target.value)}
               />
             </div>
-            <div className='ProfileFieldGroup'>
+            <div className='p-field-group'>
               <label>{t('profile_page.surname')}</label>
               <input
-                className='Field'
+                className='p-field'
                 type='text'
                 value={surname}
                 name='Surname'
@@ -70,10 +70,10 @@ const Profile = () => {
             </div>
           </div>
 
-          <div className='ProfileFieldGroup'>
+          <div className='p-field-group'>
             <label>{t('profile_page.email')}</label>
             <input
-              className='Field'
+              className='p-field'
               type='text'
               value={email}
               name='Email'
@@ -86,11 +86,11 @@ const Profile = () => {
 
       </div>
 
-      <div className='ProfileButtonsContainer'>
-        <button className='LogoutButton' onClick={() => { dispatch(userLogout()) }}>
+      <div className='p-buttons-container'>
+        <button className='p-logout-button' onClick={() => { dispatch(businessLogout()) }}>
           {t('profile_page.logout')}
         </button>
-        <button className='SaveButton' onClick={() => { dispatch(userEdit(user.id, { email, name, surname })) }}>
+        <button className='p-save-button' onClick={() => { dispatch(businessEdit(business.id, { email, name, surname })) }}>
           {t('profile_page.save_changes')}
         </button>
 

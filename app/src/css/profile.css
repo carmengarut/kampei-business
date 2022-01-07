@@ -1,32 +1,27 @@
-.ProfileContainer { 
+.p-container { 
     padding: 20px 100px;
 }
 
-
-
-.ProfileCard {
+.p-box {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: #FFFFFF;
-    /* Shadow Card */
+
+    padding: 30px;
 
     box-shadow: 0px 7px 20px rgba(40, 41, 61, 0.08);
     border-radius: 8px;
-
-    padding: 30px;
 
     font-family: Poppins;
     font-style: normal;
     font-weight: 600;
     font-size: 14px;
     line-height: 17px;
-
     color: #3A3C40;
 }
 
-.ProfileSubcontainer1 {
+.p-name-block {
     display: -webkit-flex;
     display: flex;
     align-items: center;
@@ -34,46 +29,31 @@
     margin: 25px 0 0 0;
 }
 
-.ProfileName {
+.p-name {
     margin-left: 16px;
     margin-right: 10px;
 }
 
-.ProfileTrustRate {
-    font-family: Poppins;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 12px;
-    line-height: 15px;
-    width: fit-content;
-
-    margin-left: 10px;
-    color: #FFFFFF;
-
-    padding: 4.5px 17px;
-
-    background: #2CC5BD;
-    border-radius: 20px;
-}
-
-.ProfileForm { 
+.p-form { 
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
 }
 
-.ProfileRow1 {
+.p-form-row-1 {
     display: -webkit-flex;
     display: flex;
+
     margin: 40px 0 20px 0;
 }
 
-.ProfileFieldGroup {
+.p-field-group {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
-    margin-right: 20px;
     text-align: left;
+
+    margin-right: 20px;
 
   
     font-family: Poppins;
@@ -81,142 +61,112 @@
     font-weight: 600;
     font-size: 14px;
     line-height: 21px;
-    /* identical to box height */
-
-
     color: #626266;
 }
 
 
-.Field {
-    margin-top: 10px;
-
-    padding-left: 13px;
+.p-field {
     width: 232px;
     height: 46px;
-
-    background: #F6F6F6;
+    margin-top: 10px;
+    padding-left: 13px;
+    
     border-radius: 8px;
     border: none;
 
-    
+    background: #F6F6F6;
 }
 
-.ProfileButtonsContainer {
+.p-buttons-container {
     display: -webkit-flex;
     display: flex;
     justify-content: flex-end;
+
     margin: 25px 10px;
 }
 
-.LogoutButton {
-    /* Auto Layout */
+.p-logout-button {
+    justify-content: center;
+    text-align: center;
+ 
     width: 232px;
     height: 45px;
-
-    justify-content: center;
     margin-right: 10px;
     
-    /* Grayscale 900 Opacity / 12% */
-    background: #FFFFFF;
     border: 1px solid rgba(18, 17, 39, 0.12);
     border-radius: 8px;
     
-
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
-
-    text-align: center;
-
-    /* Grayscale / 900 */
-
     color: #121127;
+
+    background: #FFFFFF;
 
 }
 
-.SaveButton {
+.p-save-button {
+    text-align: center;
 
     width: 232px;
     height: 45px;
-
-    /* Blue / 500 */
-
-    background: #4E8AF4;
+    margin-left: 10px;
+ 
     border-radius: 8px;
     border: none;
-    margin-left: 10px;
-
+    
     font-family: Poppins;
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
     line-height: 24px;
-    /* identical to box height, or 171% */
-
-    text-align: center;
-
-    /* Black & White/White */
-
     color: #FFFFFF;
 
+    background: #8B5CF6;
 }
 
 @media (max-width: 800px) {
-    .ProfileContainer {
+    .p-container  {
         padding: 80px 20px 40px 20px;  
     }
 
-    .ProfileHeader {
-        margin-top: 0px;
-    }
-
-    .LogoutButton {
-        width: 150px;
+    .p-logout-button {
+        width: 50%;
         margin: 0px;
     }
 
-    .ProfileCard {
+    .p-box  {
         padding: 30px 20px;
+        margin-top: 20px;
     }
 
-    .ProfileSubcontainer1 {
+    .p-name-block {
         margin-bottom: 0;
     }
 
-    .ProfileTrustRate {
-        display: inline-flex;
-        margin-left: 0;
-        margin-top: 10px;
-    }
-
-    .ProfileRow1 {
+    .p-form-row-1 {
         flex-direction: column;
         margin: 0px
     }
 
-    .ProfileForm {
-        width: 100%;
-        
+    .p-form {
+        width: 100%;  
     }
 
-    .ProfileFieldGroup {
+    .p-field-group {
         width: 100%;
         margin-top: 20px;
-        margin-right: 0;
-        
+        margin-right: 0;   
     }
 
-    .Field {
+    .p-field {
         width: 100%;
-        
     }
 
-    .SaveButton {
-        margin-top: 20px;
+    .p-save-button {
         margin-bottom: 30px;
+        width: 50%;
     }
 }

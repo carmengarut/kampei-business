@@ -26,7 +26,7 @@ export default function HeaderWeb () {
   }
 
   return (
-    <Navbar collapseOnSelect expand='lg' sticky='top' variant='dark'>
+    <Navbar collapseOnSelect expand='lg' sticky='top' variant='dark' className='hw-container'>
       <Container>
         <Navbar.Brand href='' className='hw-brand-container' onClick={() => { history.push('/') }}>
           <img

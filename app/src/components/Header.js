@@ -34,7 +34,7 @@ export default function Header () {
         />
         <div className='h-menu-toggle'>
           <nav className='h-menu'>
-            <div className='h-menu-section' onClick={() => { history.push('/items') }}>
+            <div className='h-menu-section' onClick={() => { history.push('/menu') }}>
               <img
                 alt=''
                 src={menuSectionIcon}

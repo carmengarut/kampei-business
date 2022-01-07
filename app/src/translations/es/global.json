@@ -41,10 +41,16 @@
         "dont_have_account": "¿No tienes cuenta? ",
         "sign_up": "Regístrate"
     },
-    "items": {
+    "menu": {
         "menu": "Carta",
-        "new_deal": "Nuevo Item",
-        "no_items": "No hay items añadidos"
+        "edit_menu": "Editar Carta",
+        "menu_details": "Carta:",
+        "create_your_menu": "Crea tu carta:",
+        "save_menu": "Guardar Carta"
+    },
+    "menu_section": {
+        "blendedDrinks": "Combinados",
+        "softDrinks": "Refrescos"
     },
     "deal": {
         "signed": "Firmado",

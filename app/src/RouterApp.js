@@ -8,8 +8,8 @@ import { useSelector } from 'react-redux'
 import Users from './Users'
 import LandingPage from './LandingPage'
 import ItemDetails from './components/ItemDetails'
-import Items from './Items'
 import ItemForm from './components/ItemForm'
+import Menu from './Menu'
 
 export default function RouterApp () {
   const business = useSelector(state => state.business)
@@ -26,7 +26,7 @@ export default function RouterApp () {
       </Route>
 
       <Route path='/items'>
-        <Items />
+        <Menu />
       </Route>
 
       <Route path='/users'>
@@ -58,7 +58,7 @@ export default function RouterApp () {
       />
 
       <Route path='/'>
-        <Items />
+        <Menu />
       </Route>
     </Switch>
   )

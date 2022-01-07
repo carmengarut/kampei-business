@@ -1,0 +1,36 @@
+.il-container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0px 0px;
+    margin-left: 30px;
+
+    border-bottom: 1px solid rgba(18, 17, 39, 0.10);
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #283252;
+}
+
+.il-content {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+
+    padding: 10px;
+
+}
+
+.il-name {
+    margin-left: 10px;
+    
+}
+
+.il-price { 
+    margin-right: 30px;
+}

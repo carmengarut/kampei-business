@@ -1,0 +1,81 @@
+.ilc-container {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+
+    margin-left: 30px;
+
+    border-bottom: 1px solid rgba(18, 17, 39, 0.10);
+}
+
+.ilc-container:hover { 
+    background: #F5F3FF;
+}
+
+.icl-item {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.ilc-name {
+    margin-left: 10px;
+    
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #283252;
+}
+
+.ilc-price {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+}
+
+.ilc-field {
+    height: 35px;
+    width: 100px;
+    padding-left: 13px;
+    margin-left: 20px;
+
+    border-radius: 8px;
+    border: none;
+
+    background: #F6F6F6;
+ 
+}
+
+@media (max-width: 800px) {
+   
+
+    .ilc-field {
+        width: 80px;
+    }
+
+}
+
+
+
+@media (max-width: 380px) {
+    .ilc-container{
+    margin-left: 0px;
+
+    }
+
+}
+
+@media (max-width: 285px) {
+    .ilc-field{
+        margin-left: 0px;
+        width: 60px;
+
+    }
+
+    .ilc-name {
+        margin-left: 5px;
+    }
+
+}

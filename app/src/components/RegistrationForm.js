@@ -9,6 +9,7 @@ import { useTranslation } from 'react-i18next'
 
 import logo from '../public/logo-header.svg'
 import '../css/registrationForm.css'
+import Checkbox from './Checkbox'
 
 export default function RegistrationForm () {
   const [email, setEmail] = useState('')
@@ -100,10 +101,7 @@ export default function RegistrationForm () {
               />
             </div>
           </div>
-          <label className='rf-checkbox-container'><span>{t('sign_up.terms_and_conditions')}</span>
-            <input type='checkbox' required />
-            <span className='rf-checkbox' />
-          </label>
+          <Checkbox required={1}>{t('sign_up.terms_and_conditions')}</Checkbox>
           {/* <div className='CheckboxContainer'>
             <input
               type='checkbox'

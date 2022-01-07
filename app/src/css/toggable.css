@@ -1,0 +1,44 @@
+.t-container{
+    width: 100%;
+}
+
+.t-header {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    width: 100%;
+    padding: 10px 10px;
+
+    border:none;
+    border-bottom: 1px solid rgba(18, 17, 39, 0.10);
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+    color: #8B5CF6;
+
+
+    background: white;
+}
+
+.t-header:hover { 
+    background: #F5F3FF;
+}
+
+.t-angle { 
+    color: #8B5CF6;
+    margin-right: 10px;
+}
+
+.t-item-content {
+    display: -webkit-flex;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+
+}
+

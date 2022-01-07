@@ -1,6 +1,7 @@
 @import url('./fonts.css');
-
-
+.hw-container { 
+    background: #1F1F24;
+}
 .hw-brand-container {
     display: -webkit-flex;
     display: flex;
@@ -48,6 +49,8 @@
     line-height: 140%;
     color: #FFFFFF;
 
+    background: #1F1F24;
+
 }
 
 li {
@@ -74,6 +77,7 @@ li {
 .hw-action-buttons-container {
     display: -webkit-flex;
     display: flex;
+    background: #1F1F24;
 }
 
 .hw-signup-button {
@@ -107,6 +111,7 @@ li {
     font-weight: 500;
     font-size: 14px;
     color: #FFFFFF;
+    background: #1F1F24;
 }
 
 @media (min-width: 2000px) {

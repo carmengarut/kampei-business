@@ -44,9 +44,10 @@ itemsRouter.delete('/:id', userExtractor, async (request, response, next) => {
 })
 
 itemsRouter.post('/', userExtractor, async (request, response, next) => {
-  const { title, image, category, price } = request.body
+  const { name, image, category, price } = request.body
 
-  if (!title || !category || !price) {
+  if (!name || !category || !price) {
+    console.log('Item property is missing')
     return response.status(400).json({
       error: 'Item property is missing'
     })
@@ -61,7 +62,7 @@ itemsRouter.post('/', userExtractor, async (request, response, next) => {
   }
 
   const newItem = new Item({
-    title,
+    name,
     image,
     category,
     price,
@@ -73,7 +74,7 @@ itemsRouter.post('/', userExtractor, async (request, response, next) => {
   try {
     const savedItem = await newItem.save()
     business.items = business.items.concat(savedItem._id)
-    await business.save()
+    await business.update()
 
     response.status(201).json(savedItem)
   } catch (error) {
