@@ -5,11 +5,9 @@ import RegistrationForm from './components/RegistrationForm'
 import OrderForm from './components/OrderForm'
 import Profile from './Profile'
 import { useSelector } from 'react-redux'
-import Users from './Users'
 import LandingPage from './LandingPage'
-import ItemDetails from './components/ItemDetails'
-import ItemForm from './components/ItemForm'
 import Menu from './Menu'
+import EditMenu from './components/EditMenu'
 
 export default function RouterApp () {
   const business = useSelector(state => state.business)
@@ -17,24 +15,17 @@ export default function RouterApp () {
   return (
 
     <Switch>
-      <Route path='/items/:id'>
-        <ItemDetails />
-      </Route>
 
       <Route path='/profile'>
         <Profile />
       </Route>
 
-      <Route path='/items'>
+      <Route path='/menu'>
         <Menu />
       </Route>
 
-      <Route path='/users'>
-        <Users />
-      </Route>
-
-      <Route path='/create-item'>
-        <ItemForm />
+      <Route path='/edit-menu'>
+        <EditMenu />
       </Route>
 
       <Route path='/landing'>
@@ -60,6 +51,7 @@ export default function RouterApp () {
       <Route path='/'>
         <Menu />
       </Route>
+
     </Switch>
   )
 }

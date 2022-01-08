@@ -73,8 +73,9 @@ itemsRouter.post('/', userExtractor, async (request, response, next) => {
 
   try {
     const savedItem = await newItem.save()
-    business.items = business.items.concat(savedItem._id)
-    await business.update()
+    const itemsList = business.items.concat(savedItem._id)
+
+    await Business.findByIdAndUpdate(userId, { items: itemsList })
 
     response.status(201).json(savedItem)
   } catch (error) {

@@ -1,17 +1,13 @@
-import { createItem, getAllItems, updateItem } from '../services/items'
+import { orderAlphabetically } from '../helpers/sort'
+import { createItem, deleteItem, getAllItems, updateItem } from '../services/items'
 import { showModal } from './modalReducer'
-import { setNotification, removeNotification } from './notificationReducer'
-
-const compareFunction = (objectA, objectB) => {
-  return new Date(objectB.date).getTime() - new Date(objectA.date).getTime()
-}
 
 const initialState = []
 
 export const itemReducer = (state = initialState, action) => {
   if (action.type === '@items/init') {
     const items = action.payload
-    items.sort(compareFunction)
+    items.sort(orderAlphabetically)
     return items
   }
 
@@ -45,7 +41,7 @@ export const itemReducer = (state = initialState, action) => {
       }
       return item
     })
-    items.sort(compareFunction)
+    items.sort(orderAlphabetically)
     return items
   }
 
@@ -67,12 +63,11 @@ export const itemReducer = (state = initialState, action) => {
   //   return blogs
   // }
 
-  // if (action.type === '@blogs/deleted') {
-  //   console.log('ha entrado')
-  //   const { id } = action.payload
-  //   const blogs = state.filter(blog => blog.id !== id)
-  //   return blogs
-  // }
+  if (action.type === '@items/deleted') {
+    const { id } = action.payload
+    const items = state.filter(item => item.id !== id)
+    return items
+  }
 
   return state
 }
@@ -91,10 +86,7 @@ export const addNewItem = item => {
   return async (dispatch) => {
     try {
       const newItem = await createItem(item)
-      dispatch(setNotification('Item successfully created.'))
-      setTimeout(() => {
-        dispatch(removeNotification())
-      }, 5000)
+      dispatch(showModal())
       dispatch({
         type: '@items/created',
         payload: newItem
@@ -127,12 +119,13 @@ export const editItem = (id, object) => {
   }
 }
 
-// export const removeBlog = id => {
-//   return async (dispatch) => {
-//     await deleteBlog(id)
-//     dispatch({
-//       type: '@blogs/deleted',
-//       payload: { id }
-//     })
-//   }
-// }
+export const removeItem = id => {
+  return async (dispatch) => {
+    await deleteItem(id)
+    dispatch(showModal())
+    dispatch({
+      type: '@items/deleted',
+      payload: { id }
+    })
+  }
+}

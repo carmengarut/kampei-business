@@ -1,20 +1,22 @@
 
-import Notification from './components/Notification'
 import { useTranslation } from 'react-i18next'
-
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
 
+import SectionTitle from './components/SectionTitle'
+import MenuSection from './components/MenuSection'
+import Modal from './components/Modal'
+
 import useItems from './hooks/useItems'
+
+import { addNewItem } from './reducers/itemReducer'
+import { hideModal } from './reducers/modalReducer'
+
+import successIcon from './public/success-icon.svg'
 
 import './css/menu.css'
 
-import SectionTitle from './components/SectionTitle'
-import { addNewItem } from './reducers/itemReducer'
-
-import MenuSection from './components/MenuSection'
-
-function Menu () {
+export default function Menu () {
   const business = useSelector(state => state.business)
   const items = useSelector(state => state.items)
 
@@ -38,7 +40,6 @@ function Menu () {
       <SectionTitle>
         {t('menu.menu')}
       </SectionTitle>
-      <Notification />
 
       {items.filter(item => {
         if (item.business.id) return item.business.id === business.id
@@ -47,13 +48,16 @@ function Menu () {
         ? (
           <>
             <div className='m-button-container'>
-              <button onClick={() => history.push('/edit-menu')} className='m-button'>{t('menu.edit_menu')}</button>
+              <button onClick={() => history.push('/edit-menu')} className='m-edit-button-top'>{t('menu.edit_menu')}</button>
             </div>
             <div className='m-box'>
               <div>{t('menu.menu_details')}</div>
               <br />
               <MenuSection category='blendedDrinks' />
               <MenuSection category='softDrinks' />
+            </div>
+            <div className='m-button-container'>
+              <button onClick={() => history.push('/edit-menu')} className='m-edit-button-bottom'>{t('menu.edit_menu')}</button>
             </div>
           </>
           )
@@ -66,13 +70,27 @@ function Menu () {
               <MenuSection category='softDrinks' checkbox menu={menu} setMenu={setMenu} />
             </div>
             <div className='m-button-container'>
-              <button type='submit' className='m-button'>{t('menu.save_menu')}</button>
+              <button type='submit' className='m-save-button'>{t('menu.save_menu')}</button>
             </div>
           </form>
           )}
 
+      <Modal
+        action={() => {
+          dispatch(hideModal())
+        }}
+        displayCancelButton='none'
+        buttonName={t('menu.accept')}
+      >
+        <img
+          alt=''
+          src={successIcon}
+          width='100'
+          height='100'
+        />
+        <h6>{t('menu.menu_created')}</h6>
+        {t('menu.successfully_created')}
+      </Modal>
     </div>
   )
 }
-
-export default Menu

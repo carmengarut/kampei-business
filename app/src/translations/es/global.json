@@ -46,7 +46,13 @@
         "edit_menu": "Editar Carta",
         "menu_details": "Carta:",
         "create_your_menu": "Crea tu carta:",
-        "save_menu": "Guardar Carta"
+        "save_menu": "Guardar Carta",
+        "edit_your_menu": "Edita tu carta:",
+        "accept": "Aceptar",
+        "menu_edited": "¡Carta editada!",
+        "successfully_edited": "Tu carta ha sido editada correctamente.",
+        "menu_created": "¡Carta creada!",
+        "successfully_created": "Tu carta ha sido creada correctamente."
     },
     "menu_section": {
         "blendedDrinks": "Combinados",

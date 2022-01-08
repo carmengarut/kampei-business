@@ -15,7 +15,7 @@ export default function MenuSection ({ category, checkbox, menu, setMenu }) {
   return (
     <>
       {
-        sectionItems
+        (checkbox || sectionItems.length > 0)
           ? (
             <Toggable buttonLabel={t('menu_section.' + category)}>
               {

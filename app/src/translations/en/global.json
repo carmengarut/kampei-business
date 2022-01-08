@@ -46,7 +46,13 @@
         "edit_menu": "Edit Menu",
         "menu_details": "Menu:",
         "create_your_menu": "Create your menu:",
-        "save_menu": "Save Menu"
+        "save_menu": "Save Menu",
+        "edit_your_menu": "Edit your menu:",
+        "accept": "Accept",
+        "menu_edited": "Successfully edited!",
+        "successfully_edited": "Your menu has been successfully edited.",
+        "menu_created": "Successfully created!",
+        "successfully_created": "Your menu has been successfully created."
     },
     "menu_section": {
         "blendedDrinks": "Blended drinks",

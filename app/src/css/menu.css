@@ -10,7 +10,7 @@
     margin-bottom: 25px;
 }
 
-.m-button {
+.m-edit-button-top, .m-edit-button-bottom, .m-save-button {
     text-align: center;
 
     height: 40px;
@@ -28,6 +28,10 @@
     color: #FFFFFF;
 
     background: #8B5CF6; 
+}
+
+.m-edit-button-bottom {
+    display: none;
 }
 
 .m-box {
@@ -74,9 +78,19 @@
         padding: 20px 0px;
     }
 
-    .m-button {
+    .m-save-button {
         width: 100%;
         margin: 0px 20px;
+    }
+
+    .m-edit-button-bottom {
+        display: block;
+        width: 100%;
+        margin: 0px 20px;
+    }
+
+    .m-edit-button-top{
+        display: none;
     }
 }
 
