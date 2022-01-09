@@ -21,7 +21,7 @@ const Checkbox = ({ children, required = false, handleChange, object, checked })
     <label className='c-container'>
       {required
         ? <input type='checkbox' onChange={handleClick} required checked={checked} className='c-hidden' />
-        : <input type='checkbox' onChange={handleClick} checked={checked} className='c-hidden' />}
+        : <input type='checkbox' onChange={handleClick} required={false} checked={checked} className='c-hidden' />}
       <span className='c-checkbox' />
       <span className='c-text'>
         {children}

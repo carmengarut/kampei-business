@@ -20,7 +20,7 @@ const Toggable = forwardRef(({ children, buttonLabel = 'show' }, ref) => {
 
   return (
     <div className='t-container'>
-      <button className='t-header' onClick={toggleVisibility}>
+      <button type='button' className='t-header' onClick={toggleVisibility}>
         <div className='t-angle'>{visible
           ? <FontAwesome name='minus' />
           : <FontAwesome name='plus' />}

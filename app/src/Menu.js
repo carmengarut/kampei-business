@@ -57,7 +57,7 @@ export default function Menu () {
               <MenuSection category='softDrinks' />
             </div>
             <div className='m-button-container'>
-              <button onClick={() => history.push('/edit-menu')} className='m-edit-button-bottom'>{t('menu.edit_menu')}</button>
+              <button type='submit' onClick={() => history.push('/edit-menu')} className='m-edit-button-bottom'>{t('menu.edit_menu')}</button>
             </div>
           </>
           )
