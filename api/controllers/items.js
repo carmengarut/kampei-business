@@ -13,23 +13,36 @@ itemsRouter.get('/', async (request, response) => {
   response.json(items)
 })
 
-itemsRouter.get('/:id', (request, response, next) => {
+itemsRouter.get('/:id', async (request, response, next) => {
   const id = request.params.id
-  Item.findById(id)
+  const items = await Item.find({})
     .populate('business', {
       email: 1,
       name: 1
     })
-    .then(item => {
-      if (item) {
-        return response.json(item)
-      } else {
-        response.status(404).end()
-      }
+    .populate('subitem', {
+      name: 1,
+      image: 1,
+      price: 1
     })
-    .catch(err => {
-      next(err)
+
+  response.json(items.filter(item => item.business.id === id))
+})
+
+itemsRouter.get('/one/:id', async (request, response, next) => {
+  const id = request.params.id
+  const item = await Item.findById(id)
+    .populate('business', {
+      email: 1,
+      name: 1
     })
+    .populate('subitem', {
+      name: 1,
+      image: 1,
+      price: 1
+    })
+
+  response.json(item)
 })
 
 itemsRouter.delete('/:id', userExtractor, async (request, response, next) => {
@@ -44,7 +57,7 @@ itemsRouter.delete('/:id', userExtractor, async (request, response, next) => {
 })
 
 itemsRouter.post('/', userExtractor, async (request, response, next) => {
-  const { name, image, category, price } = request.body
+  const { name, image, category, subcategory, price, subitem } = request.body
 
   if (!name || !category || !price) {
     console.log('Item property is missing')
@@ -65,7 +78,9 @@ itemsRouter.post('/', userExtractor, async (request, response, next) => {
     name,
     image,
     category,
+    subcategory,
     price,
+    subitem,
     creationDate: new Date().toISOString(),
     status: 'active',
     business: business._id

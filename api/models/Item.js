@@ -7,6 +7,11 @@ const itemSchema = new Schema({
   status: String,
   price: Number,
   category: String,
+  subcategory: String,
+  subitem: {
+    type: Schema.Types.ObjectId,
+    ref: 'Item'
+  },
   business: {
     type: Schema.Types.ObjectId,
     ref: 'Business'

@@ -1,5 +1,5 @@
 import { orderAlphabetically } from '../helpers/sort'
-import { createItem, deleteItem, getAllItems, updateItem } from '../services/items'
+import { createItem, deleteItem, getItems, updateItem } from '../services/items'
 import { showModal } from './modalReducer'
 
 const initialState = []
@@ -72,9 +72,9 @@ export const itemReducer = (state = initialState, action) => {
   return state
 }
 
-export const itemInit = () => {
+export const itemInit = (id) => {
   return async (dispatch) => {
-    const items = await getAllItems()
+    const items = await getItems(id)
     dispatch({
       type: '@items/init',
       payload: items

@@ -13,21 +13,48 @@ const useItems = () => {
       value: true,
       image: barcelo,
       price: '',
-      category: 'blendedDrinks'
+      category: 'blendedDrinks',
+      subcategory: 'alcohol'
     },
     {
       name: 'Beefeater',
       value: true,
       image: beefeater,
       price: '',
-      category: 'blendedDrinks'
+      category: 'blendedDrinks',
+      subcategory: 'alcohol'
     },
     {
       name: 'Johnnie Walker',
       value: true,
       image: johnnieWalker,
       price: '',
-      category: 'blendedDrinks'
+      category: 'blendedDrinks',
+      subcategory: 'alcohol'
+    },
+    {
+      name: 'Cocacola (Añad)',
+      value: true,
+      image: cocacola,
+      price: '',
+      category: 'blendedDrinks',
+      subcategory: 'soda'
+    },
+    {
+      name: 'Fanta Naranja (Añad)',
+      value: true,
+      image: fantaNaranja,
+      price: '',
+      category: 'blendedDrinks',
+      subcategory: 'soda'
+    },
+    {
+      name: 'Sprite (Añad)',
+      value: true,
+      image: sprite,
+      price: '',
+      category: 'blendedDrinks',
+      subcategory: 'soda'
     },
     {
       name: 'Cocacola',

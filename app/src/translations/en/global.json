@@ -56,11 +56,36 @@
     },
     "menu_section": {
         "blendedDrinks": "Blended drinks",
-        "softDrinks": "Soft drinks"
+        "softDrinks": "Soft drinks",
+        "alcohol": "Alcohol",
+        "soda": "Soda"
     },
-    "deal": {
-        "signed": "Signed",
-        "not_signed": "Not Signed"
+    "menu_customers": {
+        "menu": "Menu:",
+        "blended_drinks": "Blended drinks",
+        "beers": "Beers",
+        "soft_drinks": "Soft drinks",
+        "see_cart": "See cart"
+    },
+    "menu_category": {
+        "blendedDrinks": "Blended drinks",
+        "beers": "Beers",
+        "softDrinks": "Soft drinks",
+        "see_cart": "See cart"
+    },
+    "cart": {
+        "your_cart": "Your cart:",
+        "subtotal": "Subtotal",
+        "checkout": "Go to checkout"
+    },
+    "item": {
+       "add": "Add",
+       "to_cart": "to cart",
+       "select_mix": "Select accompaniment"
+    },
+    "edit_cart_item": {
+        "remove_item": "Remove item",
+        "update_cart": "Update cart"
     },
     "header": {
         "menu": "Menu",

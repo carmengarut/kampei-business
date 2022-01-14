@@ -1,4 +1,4 @@
-
+import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
@@ -9,7 +9,7 @@ import Modal from './components/Modal'
 
 import useItems from './hooks/useItems'
 
-import { addNewItem } from './reducers/itemReducer'
+import { addNewItem, itemInit } from './reducers/itemReducer'
 import { hideModal } from './reducers/modalReducer'
 
 import successIcon from './public/success-icon.svg'
@@ -18,6 +18,11 @@ import './css/menu.css'
 
 export default function Menu () {
   const business = useSelector(state => state.business)
+
+  useEffect(() => {
+    dispatch(itemInit(business.id))
+  }, [])
+
   const items = useSelector(state => state.items)
 
   const history = useHistory()

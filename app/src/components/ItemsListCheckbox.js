@@ -3,7 +3,7 @@ import Checkbox from './Checkbox'
 
 import '../css/itemsListCheckbox.css'
 
-export default function ItemsListCheckbox ({ category, menu, setMenu }) {
+export default function ItemsListCheckbox ({ category, subcategory, menu, setMenu }) {
   const handleChange = ({ target }) => {
     setMenu(prev => {
       let objectToChange = menu.find(item => item.name === target.name)
@@ -13,7 +13,11 @@ export default function ItemsListCheckbox ({ category, menu, setMenu }) {
     })
   }
 
-  return (menu.filter(item => item.category === category).map((item, key) =>
+  return (menu.filter(item => {
+    return subcategory
+      ? item.category === category && item.subcategory === subcategory
+      : item.category === category
+  }).map((item, key) =>
     <div key={key} className='ilc-container'>
       <Checkbox object={item} checked={item.value} handleChange={setMenu}>
         <div className='icl-item'>

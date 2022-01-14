@@ -5,6 +5,7 @@ import thunk from 'redux-thunk'
 import { userReducer } from './reducers/userReducer'
 import { notificationReducer } from './reducers/notificationReducer'
 import { itemReducer } from './reducers/itemReducer'
+import { ordersReducer } from './reducers/ordersReducer'
 import { orderReducer } from './reducers/orderReducer'
 import { usersReducer } from './reducers/usersReducers'
 import { modalReducer } from './reducers/modalReducer'
@@ -16,7 +17,8 @@ const reducer = combineReducers({
   notification: notificationReducer,
   user: userReducer,
   business: businessReducer,
-  orders: orderReducer,
+  orders: ordersReducer,
+  currentOrder: orderReducer,
   users: usersReducer,
   businesses: businessesReducer,
   showModal: modalReducer

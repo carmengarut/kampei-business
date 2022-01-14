@@ -6,13 +6,13 @@ import { useTranslation } from 'react-i18next'
 import plus from '../public/plus.svg'
 import minus from '../public/minus.svg'
 
-import '../css/item.css'
+import '../css/editCartItem.css'
 import { itemInit } from '../reducers/itemReducer'
-import { orderAddItem, orderInit } from '../reducers/orderReducer'
+import { orderAddItem, orderInit, orderRemoveItem } from '../reducers/orderReducer'
 import FontAwesome from 'react-fontawesome'
 // import { orderAddItem, orderRemoveItem } from '../reducers/orderReducer'
 
-const Item = () => {
+const EditCartItem = () => {
   const { id, businessId } = useParams()
   const dispatch = useDispatch()
   const { t } = useTranslation('global')
@@ -32,25 +32,30 @@ const Item = () => {
   }, [])
 
   const history = useHistory()
-  const [counter, setCounter] = useState(1)
+  const count = useSelector(state => state.currentOrder).filter(itemId => itemId === id).length
+  const [counter, setCounter] = useState(count)
   const item = useSelector(state => state.items).find(item => item.id === id)
 
   const handleClick = () => {
-    dispatch(orderAddItem({
-      id,
-      count: counter
-    }))
-    history.push(`/menu/${item.business.id}`)
+    dispatch(orderRemoveItem(id))
+    dispatch(orderAddItem(Array(counter).fill(id)))
+    history.push(`/menu/${item.business.id}/cart`)
   }
+
+  const removeItem = () => {
+    dispatch(orderRemoveItem(id))
+    history.push(`/menu/${item.business.id}/cart`)
+  }
+
   if (!item) return null
   return (
-    <div className='i-container'>
-      <div className='i-title-container'>
-        <FontAwesome onClick={() => { history.push(`/menu/${businessId}/${item.category}`) }} name='arrow-left' size='2x' style={{ color: '#8B5CF6' }} />
-        <div className='i-title'>{item.name}</div>
+    <div className='eci-container'>
+      <div className='eci-title-container'>
+        <FontAwesome onClick={() => { history.push(`/menu/${businessId}/cart`) }} name='arrow-left' size='2x' style={{ color: '#8B5CF6' }} />
+        <div className='eci-title'>{item.name}</div>
       </div>
-      <div className='i-box'>
-        <div className='i-image-container'>
+      <div className='eci-box'>
+        <div className='eci-image-container'>
           <img
             src={item.image}
             width='auto'
@@ -58,34 +63,35 @@ const Item = () => {
           />
         </div>
 
-        <div className='i-name'>
+        <div className='eci-name'>
           {item.name}
         </div>
-        <div className='i-price'>{item.price} €</div>
-        <div className='i-counter-container'>
+        <div className='eci-price'>{item.price} €</div>
+        <div className='eci-counter-container'>
           <img
             type='button'
             src={minus}
             width='50'
             height='50'
             onClick={() => setCounter(counter > 0 ? counter - 1 : 0)}
-            className='i-counter-button'
+            className='eci-counter-button'
           />
-          <div className='i-counter'>{counter}</div>
+          <div className='eci-counter'>{counter}</div>
           <img
             type='button'
             src={plus}
             width='50'
             height='50'
             onClick={() => setCounter(counter + 1)}
-            className='i-counter-button'
+            className='eci-counter-button'
           />
         </div>
+        <button onClick={removeItem} className='eci-remove-button'>{t('edit_cart_item.remove_item')}</button>
 
       </div>
-      <button onClick={handleClick} className='i-button'>{t('item.add')} {counter} {t('item.to_cart')}</button>
+      <button onClick={handleClick} className='eci-button'>{t('edit_cart_item.update_cart')}</button>
     </div>
   )
 }
 
-export default Item
+export default EditCartItem

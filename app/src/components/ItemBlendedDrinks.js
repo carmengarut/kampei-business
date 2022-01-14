@@ -10,9 +10,10 @@ import '../css/item.css'
 import { itemInit } from '../reducers/itemReducer'
 import { orderAddItem, orderInit } from '../reducers/orderReducer'
 import FontAwesome from 'react-fontawesome'
+import Dropdown from './Dropdown'
 // import { orderAddItem, orderRemoveItem } from '../reducers/orderReducer'
 
-const Item = () => {
+const ItemBlendedDrinks = () => {
   const { id, businessId } = useParams()
   const dispatch = useDispatch()
   const { t } = useTranslation('global')
@@ -33,12 +34,34 @@ const Item = () => {
 
   const history = useHistory()
   const [counter, setCounter] = useState(1)
+  const items = useSelector(state => state.items)
   const item = useSelector(state => state.items).find(item => item.id === id)
 
+  const [dropdownList, setDropdownList] = useState(items.filter(item => item.subcategory === 'soda').map((item, key) => {
+    return {
+      id: key,
+      title: item.name.slice(0, -7),
+      selected: false,
+      key: 'subitem',
+      value: item.id
+    }
+  }
+
+  ))
+
+  const resetThenSet = (id, key) => {
+    setDropdownList(prev => {
+      prev.forEach(item => { item.selected = false })
+      prev[id].selected = true
+      return prev
+    })
+  }
   const handleClick = () => {
+    const subitemId = dropdownList.find(item => item.selected === true).value
     dispatch(orderAddItem({
       id,
-      count: counter
+      count: counter,
+      subitemId
     }))
     history.push(`/menu/${item.business.id}`)
   }
@@ -62,6 +85,8 @@ const Item = () => {
           {item.name}
         </div>
         <div className='i-price'>{item.price} €</div>
+
+        <Dropdown title={t('item.select_mix')} list={dropdownList} resetThenSet={resetThenSet} />
         <div className='i-counter-container'>
           <img
             type='button'
@@ -88,4 +113,4 @@ const Item = () => {
   )
 }
 
-export default Item
+export default ItemBlendedDrinks

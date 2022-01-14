@@ -1,6 +1,6 @@
 @import url('./fonts.css');
 
-.i-container {
+.eci-container {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -11,7 +11,7 @@
     background: #FFFFFF;
 }
 
-.i-title-container {
+.eci-title-container {
     display: -webkit-flex;
     display: flex;
     align-content: center;
@@ -22,7 +22,7 @@
     
 }
 
-.i-title {
+.eci-title {
     margin-left: 20px;
     font-family: Poppins;
     font-style: normal;
@@ -31,7 +31,7 @@
     color: #283252;
 }
 
-.i-box {
+.eci-box {
     display: -webkit-flex;
     display: flex;
     flex-direction: column;
@@ -48,7 +48,7 @@
     background: white;
 }
 
-.i-image-container {
+.eci-image-container {
     display: -webkit-flex;
     display: flex;
     justify-content: center;
@@ -57,7 +57,7 @@
 
 
 
-.i-name {
+.eci-name {
     text-align: center;
 
     margin-top: 20px;
@@ -69,7 +69,7 @@
     color: #283252;
 }
 
-.i-price {
+.eci-price {
     text-align: center;
 
     margin-top: 10px;
@@ -82,7 +82,7 @@
 
 }
 
-.i-counter-container {
+.eci-counter-container {
     display: -webkit-flex;
     display: flex;
     align-items: center;
@@ -91,7 +91,7 @@
 
 }
 
-.i-counter {
+.eci-counter {
     margin: 0 10px;
 
     font-family: Poppins;
@@ -101,7 +101,21 @@
     color: #283252;
 }
 
-.i-button {
+.eci-remove-button {
+    margin-top: 30px;
+
+    border: none;
+
+    font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: red;
+
+    background: #FFFFFF;
+}
+
+.eci-button {
     text-align: center;
     position: sticky;
     bottom: 5%;
@@ -125,37 +139,37 @@
 
 
 @media (min-width: 800px) {
-    .i-container {
+    .eci-container {
         padding: 60px 100px;
     }
 
-    .i-box {
+    .eci-box {
         flex-direction: row;
         justify-content: flex-start;
     }
   
 
-    .i-image-container {
+    .eci-image-container {
         width: auto;
     }
 
-    .i-name {
+    .eci-name {
         margin-top: 0;
     }
 
-    .i-price {
+    .eci-price {
         margin-top: 0;
         margin-left: 20px;
     }
 
-    .i-counter-container {
+    .eci-counter-container {
         margin: 0;
         width: auto;
         position: absolute;
         right: 170px;
     }
 
-   .i-button {
+   .eci-button {
        position: static;
        
    }

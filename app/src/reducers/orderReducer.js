@@ -1,71 +1,67 @@
-import { addOrder, getAllOrders } from '../services/items'
-import { setNotification, removeNotification } from './notificationReducer'
+import { orderAlphabetically } from '../helpers/sort'
 
-const compareFunction = (objectA, objectB) => {
-  return objectB.date - objectA.date
-}
-
-const initialState = []
+const initialState = {}
 
 export const orderReducer = (state = initialState, action) => {
-  if (action.type === '@orders/init') {
-    const orders = action.payload
-    orders.sort(compareFunction)
-    return orders
+  if (action.type === '@order/init') {
+    const currentOrder = action.payload
+    return currentOrder
   }
 
-  if (action.type === '@orders/created') {
-    return [...state, action.payload]
+  if (action.type === '@order/add-item') {
+    const item = action.payload
+    const newState = {
+      ...state,
+      items: state.items.concat(item).sort(orderAlphabetically)
+    }
+
+    window.localStorage.setItem(
+      'currentOrder', JSON.stringify(newState)
+    )
+    return newState
   }
 
-  // if (action.type === '@blogs/add_comment') {
-  //   console.log(action.payload)
-  //   const { savedComment, id } = action.payload
-  //   const blogs = state.map(blog => {
-  //     if (blog.id === id) {
-  //       return {
-  //         ...blog,
-  //         comments: [...blog.comments, {
-  //           content: savedComment.content,
-  //           id: savedComment.id
-  //         }]
-  //       }
-  //     }
-  //     return blog
-  //   })
-  //   return blogs
-  // }
+  if (action.type === '@order/remove-item') {
+    const itemId = action.payload
+    const newState = {
+      ...state,
+      items: state.filter(item => item.id !== itemId)
+    }
+    window.localStorage.setItem('currentOrder', JSON.stringify(newState))
+    return newState
+  }
 
-  // if (action.type === '@blogs/deleted') {
-  //   console.log('ha entrado')
-  //   const { id } = action.payload
-  //   const blogs = state.filter(blog => blog.id !== id)
-  //   return blogs
-  // }
+  if (action.type === '@order/remove') {
+    window.localStorage.removeItem('currentOrder')
+    return {}
+  }
 
   return state
 }
 
-export const orderInit = () => {
-  return async (dispatch) => {
-    const orders = await getAllOrders()
-    dispatch({
-      type: '@orders/init',
-      payload: orders
-    })
+export const orderInit = (currentOrder) => {
+  return {
+    type: '@order/init',
+    payload: currentOrder
   }
 }
 
-export const addNewOrder = (orderObject, newTrustRate) => {
-  return async (dispatch) => {
-    const savedOrder = await addOrder(orderObject)
-    dispatch(setNotification('Order added.'))
-    setTimeout(() => {
-      dispatch(removeNotification())
-    }, 5000)
-    dispatch({
-      type: '@orders/created',
-      payload: savedOrder
-    })
+export const orderAddItem = (item) => {
+  return {
+    type: '@order/add-item',
+    payload: item
+  }
+}
+
+export const orderRemoveItem = (itemId) => {
+  return {
+    type: '@order/remove-item',
+    payload: itemId
+  }
+}
+
+export const removeOrder = () => {
+  return {
+    type: '@order/remove'
   }
 }

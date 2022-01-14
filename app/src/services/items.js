@@ -12,8 +12,13 @@ export const getAllItems = () => {
   return request.then(response => response.data)
 }
 
-export const getItem = (id) => {
+export const getItems = (id) => {
   const request = axios.get(`${baseUrl}/${id}`)
+  return request.then(response => response.data)
+}
+
+export const getItem = (id) => {
+  const request = axios.get(`${baseUrl}/one/${id}`)
   return request.then(response => response.data)
 }
 

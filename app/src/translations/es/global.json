@@ -55,12 +55,37 @@
         "successfully_created": "Tu carta ha sido creada correctamente."
     },
     "menu_section": {
-        "blendedDrinks": "Combinados",
-        "softDrinks": "Refrescos"
+        "blendedDrinks": "Copas",
+        "softDrinks": "Refrescos",
+        "alcohol": "Alcohol",
+        "soda": "Acompañamiento"
     },
-    "deal": {
-        "signed": "Firmado",
-        "not_signed": "No Firmado"
+    "menu_customers": {
+        "menu": "Carta:",
+        "blended_drinks": "Copas",
+        "beers": "Cervezas",
+        "soft_drinks": "Refrescos",
+        "see_cart": "Ver carrito"
+    },
+    "menu_category": {
+        "blendedDrinks": "Copas",
+        "beers": "Cervezas",
+        "softDrinks": "Refrescos",
+        "see_cart": "Ver carrito"
+    },
+    "cart": {
+        "your_cart": "Tu carrito:",
+        "subtotal": "Subtotal",
+        "checkout": "Ir al pago"
+    },
+    "item": {
+       "add": "Añadir",
+       "to_cart": "al carrito",
+       "select_mix": "Selecciona acompañamiento"
+    },
+    "edit_cart_item": {
+        "remove_item": "Eliminar artículo",
+        "update_cart": "Actualizar carrito"
     },
     "header": {
         "menu": "Carta",
