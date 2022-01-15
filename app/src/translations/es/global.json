@@ -52,7 +52,8 @@
         "menu_edited": "¡Carta editada!",
         "successfully_edited": "Tu carta ha sido editada correctamente.",
         "menu_created": "¡Carta creada!",
-        "successfully_created": "Tu carta ha sido creada correctamente."
+        "successfully_created": "Tu carta ha sido creada correctamente.",
+        "download_qr": "Descargar QR"
     },
     "menu_section": {
         "blendedDrinks": "Copas",

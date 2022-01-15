@@ -1,3 +1,5 @@
+/* eslint-disable */ 
+ 
 import { useSelector } from 'react-redux'
 import { useTranslation } from 'react-i18next'
 
@@ -22,17 +24,17 @@ export default function MenuSection ({ category, checkbox, menu, setMenu }) {
               {
                 checkbox
                   ? category === 'blendedDrinks'
-                      ? (
-                        <div className='ms-container'>
-                          <Toggable buttonLabel={t('menu_section.alcohol')}>
-                            <ItemsListCheckbox category='blendedDrinks' subcategory='alcohol' menu={menu} setMenu={setMenu} />
-                          </Toggable>
-                          <Toggable buttonLabel={t('menu_section.soda')}>
-                            <ItemsListCheckbox category='blendedDrinks' subcategory='soda' menu={menu} setMenu={setMenu} />
-                          </Toggable>
-                        </div>
-                        )
-                      : <ItemsListCheckbox category={category} menu={menu} setMenu={setMenu} />
+                    ? (
+                      <div className='ms-container'>
+                        <Toggable buttonLabel={t('menu_section.alcohol')}>
+                          <ItemsListCheckbox category='blendedDrinks' subcategory='alcohol' menu={menu} setMenu={setMenu} />
+                        </Toggable>
+                        <Toggable buttonLabel={t('menu_section.soda')}>
+                          <ItemsListCheckbox category='blendedDrinks' subcategory='soda' menu={menu} setMenu={setMenu} />
+                        </Toggable>
+                      </div>
+                      )
+                    : <ItemsListCheckbox category={category} menu={menu} setMenu={setMenu} />
                   : category === 'blendedDrinks'
                     ? (
                       <div className='ms-container'>

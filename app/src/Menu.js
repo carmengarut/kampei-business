@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useHistory } from 'react-router-dom'
 import { useSelector, useDispatch } from 'react-redux'
+import QRCode from 'qrcode.react'
 
 import SectionTitle from './components/SectionTitle'
 import MenuSection from './components/MenuSection'
@@ -40,6 +41,19 @@ export default function Menu () {
     })
   }
 
+  const downloadQR = () => {
+    const canvas = document.getElementById('menu_qr_code')
+    const pngUrl = canvas
+      .toDataURL('image/png')
+      .replace('image/png', 'image/octet-stream')
+    const downloadLink = document.createElement('a')
+    downloadLink.href = pngUrl
+    downloadLink.download = 'menu_qr_code.png'
+    document.body.appendChild(downloadLink)
+    downloadLink.click()
+    document.body.removeChild(downloadLink)
+  }
+
   return (
     <div className='m-container'>
       <SectionTitle>
@@ -53,7 +67,19 @@ export default function Menu () {
         ? (
           <>
             <div className='m-button-container'>
+              <button onClick={downloadQR} className='m-edit-button-top'>{t('menu.download_qr')}</button>
               <button onClick={() => history.push('/edit-menu')} className='m-edit-button-top'>{t('menu.edit_menu')}</button>
+            </div>
+            <div>
+              <QRCode
+                id='menu_qr_code'
+                value='https://www.google.com'
+                size={290}
+                level='H'
+                includeMargin
+                style={{ display: 'none' }}
+              />
+
             </div>
             <div className='m-box'>
               <div>{t('menu.menu_details')}</div>

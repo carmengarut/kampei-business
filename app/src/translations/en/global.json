@@ -52,7 +52,8 @@
         "menu_edited": "Successfully edited!",
         "successfully_edited": "Your menu has been successfully edited.",
         "menu_created": "Successfully created!",
-        "successfully_created": "Your menu has been successfully created."
+        "successfully_created": "Your menu has been successfully created.",
+        "download_qr": "Download QR"
     },
     "menu_section": {
         "blendedDrinks": "Blended drinks",
