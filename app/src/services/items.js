@@ -67,12 +67,7 @@ export const deleteItem = (id) => {
 // }
 
 export const addOrder = (newObject) => {
-  const config = {
-    headers: {
-      Authorization: token
-    }
-  }
-  const request = axios.post('/api/orders/', newObject, config)
+  const request = axios.post('/api/orders/', newObject)
   return request.then(response => response.data)
 }
 

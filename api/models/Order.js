@@ -13,10 +13,7 @@ const orderSchema = new Schema({
     type: Schema.Types.ObjectId,
     ref: 'Business'
   },
-  items: [{
-    type: Schema.Types.ObjectId,
-    ref: 'Item'
-  }]
+  items: Array
 })
 
 orderSchema.set('toJSON', {

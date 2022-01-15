@@ -1,16 +1,16 @@
 const ordersRouter = require('express').Router()
 const Item = require('../models/Item')
-const User = require('../models/User.js')
+// const User = require('../models/User.js')
 const Order = require('../models/Order')
 const Business = require('../models/Business')
-const userExtractor = require('../middleware/userExtractor')
+// const userExtractor = require('../middleware/userExtractor')
 
-ordersRouter.post('/', userExtractor, async (request, response, next) => {
+ordersRouter.post('/', async (request, response, next) => {
   const { total, currency = 'EUR', itemsList, businessId } = request.body
 
-  const { userId } = request
+  // const { userId } = request
 
-  const user = await User.findById(userId)
+  // const user = await User.findById(userId)
   const business = await Business.findById(businessId)
 
   // itemsList.forEach(async (itemId) => {
@@ -25,28 +25,33 @@ ordersRouter.post('/', userExtractor, async (request, response, next) => {
     currency,
     date: new Date().toISOString(),
     status: 'New',
-    user: userId,
+    // user: userId,
     business: businessId,
     items: itemsList
   })
 
   try {
     const savedOrder = await newOrder.save()
-    itemsList.forEach(async (itemId) => {
-      const item = await Item.findById(itemId)
+    itemsList.forEach(async (orderItem) => {
+      const item = await Item.findById(orderItem.id)
       item.orders = item.orders.concat(savedOrder._id)
       await item.save()
+      if (orderItem.subitem) {
+        const subitem = await Item.findById(orderItem.subitem)
+        subitem.orders = subitem.orders.concat(savedOrder._id)
+        await subitem.save()
+      }
     })
 
-    user.orders = user.orders.concat(savedOrder._id)
-    await user.save()
+    // user.orders = user.orders.concat(savedOrder._id)
+    // await user.save()
 
     business.orders = business.orders.concat(savedOrder._id)
     await business.save()
 
     response.status(201).json(savedOrder)
   } catch (error) {
-    response.status(400).json(error)
+    response.status(400).json(error.message)
   }
 })
 
@@ -60,11 +65,6 @@ ordersRouter.get('/', async (request, response) => {
       email: 1,
       name: 1,
       surname: 1
-    })
-    .populate('items', {
-      title: 1,
-      price: 1,
-      currency: 1
     })
 
   response.json(orders)

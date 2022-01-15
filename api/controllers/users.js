@@ -23,17 +23,16 @@ usersRouter.post('/', async (request, response) => {
     const saltRounds = 10 // coste de generar el hash, mientras mas alto mas seguro
     const passwordHash = await bcrypt.hash(password, saltRounds)
 
-    const existingUser = await User.findOne({email: email})
+    const existingUser = await User.findOne({ email: email })
 
     if (!existingUser) {
-      
       const user = new User({
         email,
         name,
         surname,
         passwordHash,
         profileImg,
-        creationDate: new Date().toISOString(),
+        creationDate: new Date().toISOString()
       })
 
       const savedUser = await user.save()
@@ -63,9 +62,8 @@ usersRouter.post('/', async (request, response) => {
 
       response.status(201).json(userReturned)
     } else {
-      throw 'Error: User already exists'
+      throw new Error('Error: User already exists')
     }
-    
   } catch (error) {
     console.log(error.name)
     console.log(error.message)
@@ -75,12 +73,12 @@ usersRouter.post('/', async (request, response) => {
 
 usersRouter.put('/:id', userExtractor, async (request, response) => {
   const { id } = request.params
-  const newObject  = request.body
+  const newObject = request.body
 
-  try{
+  try {
     const result = await User.findByIdAndUpdate(id, newObject, { new: true })
     response.json(result)
-  } catch(e) {
+  } catch (e) {
     console.error(e.name)
     console.error(e.message)
   }

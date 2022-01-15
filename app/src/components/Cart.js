@@ -6,8 +6,9 @@ import { useTranslation } from 'react-i18next'
 import '../css/cart.css'
 import { itemInit } from '../reducers/itemReducer'
 import CartItem from './CartItem'
-import { orderInit } from '../reducers/orderReducer'
+import { orderInit, removeOrder } from '../reducers/orderReducer'
 import FontAwesome from 'react-fontawesome'
+import { addOrder } from '../services/items'
 
 export default function Cart () {
   const { id } = useParams()
@@ -32,11 +33,25 @@ export default function Cart () {
   const items = useSelector(state => state.items)
   const currentOrder = useSelector(state => state.currentOrder)
 
-  const handleClick = () => {
-
+  const handleClick = async () => {
+    const total = currentOrder.items.reduce((previousValue, currentValue) => {
+      if (currentValue.subitemId) {
+        return previousValue + items.find(item => item.id === currentValue.id).price * currentValue.count + items.find(item => item.id === currentValue.subitemId).price * currentValue.count
+      } else {
+        return previousValue + items.find(item => item.id === currentValue.id).price * currentValue.count
+      }
+    }, 0)
+    try {
+      await addOrder({ businessId: currentOrder.business, itemsList: currentOrder.items, total })
+      dispatch(removeOrder())
+      history.push(`/menu/${id}`)
+    } catch (e) {
+      console.log(e.name)
+      console.log(e.message)
+    }
   }
 
-  if (!items[0] || !currentOrder.items[0]) return null
+  if (!items[0] || !currentOrder.items) return null
 
   return (
     <div className='ca-container'>
