@@ -73,7 +73,7 @@ export default function Menu () {
             <div>
               <QRCode
                 id='menu_qr_code'
-                value='https://www.google.com'
+                value={`https://kampei.herokuapp.com/menu/${business.id}`}
                 size={290}
                 level='H'
                 includeMargin

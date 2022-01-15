@@ -88,6 +88,9 @@
         "remove_item": "Remove item",
         "update_cart": "Update cart"
     },
+    "orders": {
+        "orders": "Orders"
+    },
     "header": {
         "menu": "Menu",
         "orders": "Orders",

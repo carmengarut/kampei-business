@@ -76,6 +76,16 @@ export const getAllOrders = () => {
   return request.then(response => response.data)
 }
 
+export const updateOrder = (id, newObject) => {
+  const config = {
+    headers: {
+      Authorization: token
+    }
+  }
+  const request = axios.put(`/api/orders/${id}`, newObject, config)
+  return request.then(response => response.data)
+}
+
 // export const updateTrustRate = (id, trustRate) => {
 //   const config = {
 //     headers: {

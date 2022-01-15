@@ -43,7 +43,7 @@ export default function Cart () {
     }, 0)
 
     const itemsList = currentOrder.items.map(item => {
-      return { item: item.id, count: item.count, subitem: item.subitem }
+      return { item: item.id, count: item.count, subitem: item.subitemId }
     })
     try {
       await addOrder({ businessId: currentOrder.business, itemsList, total })

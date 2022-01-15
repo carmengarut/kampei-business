@@ -1,7 +1,7 @@
-import { getAllOrders } from '../services/items'
+import { getAllOrders, updateOrder } from '../services/items'
 
 const compareFunction = (objectA, objectB) => {
-  return objectB.date - objectA.date
+  return objectA.date - objectB.date
 }
 
 const initialState = []
@@ -10,6 +10,14 @@ export const ordersReducer = (state = initialState, action) => {
   if (action.type === '@orders/init') {
     const orders = action.payload
     orders.sort(compareFunction)
+    return orders
+  }
+
+  if (action.type === '@orders/update-order') {
+    const newOrder = action.payload
+    const orders = state.map(order => order.id === newOrder.id
+      ? { ...order, ...newOrder }
+      : order)
     return orders
   }
 
@@ -51,6 +59,16 @@ export const ordersInit = () => {
     dispatch({
       type: '@orders/init',
       payload: orders
+    })
+  }
+}
+
+export const editOrder = (id, newObject) => {
+  return async (dispatch) => {
+    const newOrder = await updateOrder(id, newObject)
+    dispatch({
+      type: '@orders/update-order',
+      payload: newOrder
     })
   }
 }

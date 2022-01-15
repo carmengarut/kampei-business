@@ -1,3 +1,7 @@
+body {
+    background: #FFFFFF;
+}
+
 .mc-container { 
     display: -webkit-flex;
     display: flex;
