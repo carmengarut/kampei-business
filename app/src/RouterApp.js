@@ -13,6 +13,7 @@ import Cart from './components/Cart'
 import MenuCustomers from './components/MenuCustomers'
 import MenuCategory from './components/MenuCategory'
 import ItemBlendedDrinks from './components/ItemBlendedDrinks'
+import OrdersSection from './components/OrdersSection'
 
 export default function RouterApp () {
   const business = useSelector(state => state.business)
@@ -51,6 +52,10 @@ export default function RouterApp () {
 
       <Route path='/menu'>
         <Menu />
+      </Route>
+
+      <Route path='/orders'>
+        <OrdersSection />
       </Route>
 
       <Route path='/edit-menu'>

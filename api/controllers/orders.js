@@ -33,7 +33,7 @@ ordersRouter.post('/', async (request, response, next) => {
   try {
     const savedOrder = await newOrder.save()
     itemsList.forEach(async (orderItem) => {
-      const item = await Item.findById(orderItem.id)
+      const item = await Item.findById(orderItem.item)
       item.orders = item.orders.concat(savedOrder._id)
       await item.save()
       if (orderItem.subitem) {
@@ -65,6 +65,11 @@ ordersRouter.get('/', async (request, response) => {
       email: 1,
       name: 1,
       surname: 1
+    })
+    .populate('items.item', {
+      name: 1,
+      price: 1
+      
     })
 
   response.json(orders)

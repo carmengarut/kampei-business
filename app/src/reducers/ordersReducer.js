@@ -1,5 +1,4 @@
-import { addOrder, getAllOrders } from '../services/items'
-import { setNotification, removeNotification } from './notificationReducer'
+import { getAllOrders } from '../services/items'
 
 const compareFunction = (objectA, objectB) => {
   return objectB.date - objectA.date
@@ -14,9 +13,9 @@ export const ordersReducer = (state = initialState, action) => {
     return orders
   }
 
-  if (action.type === '@orders/created') {
-    return [...state, action.payload]
-  }
+  // if (action.type === '@orders/created') {
+  //   return [...state, action.payload]
+  // }
 
   // if (action.type === '@blogs/add_comment') {
   //   console.log(action.payload)
@@ -46,7 +45,7 @@ export const ordersReducer = (state = initialState, action) => {
   return state
 }
 
-export const orderInit = () => {
+export const ordersInit = () => {
   return async (dispatch) => {
     const orders = await getAllOrders()
     dispatch({
@@ -56,16 +55,16 @@ export const orderInit = () => {
   }
 }
 
-export const addNewOrder = (orderObject, newTrustRate) => {
-  return async (dispatch) => {
-    const savedOrder = await addOrder(orderObject)
-    dispatch(setNotification('Order added.'))
-    setTimeout(() => {
-      dispatch(removeNotification())
-    }, 5000)
-    dispatch({
-      type: '@orders/created',
-      payload: savedOrder
-    })
-  }
-}
+// export const addNewOrder = (orderObject, newTrustRate) => {
+//   return async (dispatch) => {
+//     const savedOrder = await addOrder(orderObject)
+//     dispatch(setNotification('Order added.'))
+//     setTimeout(() => {
+//       dispatch(removeNotification())
+//     }, 5000)
+//     dispatch({
+//       type: '@orders/created',
+//       payload: savedOrder
+//     })
+//   }
+// }

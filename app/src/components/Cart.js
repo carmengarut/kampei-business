@@ -41,8 +41,12 @@ export default function Cart () {
         return previousValue + items.find(item => item.id === currentValue.id).price * currentValue.count
       }
     }, 0)
+
+    const itemsList = currentOrder.items.map(item => {
+      return { item: item.id, count: item.count, subitem: item.subitem }
+    })
     try {
-      await addOrder({ businessId: currentOrder.business, itemsList: currentOrder.items, total })
+      await addOrder({ businessId: currentOrder.business, itemsList, total })
       dispatch(removeOrder())
       history.push(`/menu/${id}`)
     } catch (e) {
