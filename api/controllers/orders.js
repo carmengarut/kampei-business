@@ -3,7 +3,7 @@ const Item = require('../models/Item')
 // const User = require('../models/User.js')
 const Order = require('../models/Order')
 const Business = require('../models/Business')
-// const userExtractor = require('../middleware/userExtractor')
+const userExtractor = require('../middleware/userExtractor')
 
 ordersRouter.post('/', async (request, response, next) => {
   const { total, currency = 'EUR', itemsList, businessId } = request.body
@@ -71,8 +71,42 @@ ordersRouter.get('/', async (request, response) => {
       price: 1
       
     })
+    .populate('items.subitem', {
+      name: 1,
+      price: 1
+      
+    })
 
   response.json(orders)
+})
+
+ordersRouter.put('/:id', userExtractor, async (request, response, next) => {
+  const { id } = request.params
+  const newOrder = request.body
+
+  try {
+    const result = await Order.findByIdAndUpdate(id, newOrder, { new: true })
+      .populate('items.item', {
+        name: 1,
+        price: 1
+        
+      })
+      .populate('items.subitem', {
+        name: 1,
+        price: 1
+        
+      })
+
+    if (result === null) {
+      return response.status(400).json({
+        error: 'Order does´t exist'
+      })
+    }
+
+    response.json(result)
+  } catch (e) {
+    next(e)
+  }
 })
 
 module.exports = ordersRouter
