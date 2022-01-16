@@ -1,5 +1,6 @@
 require('dotenv').config()
 require('./mongo.js') // Esto ejecuta el fichero de mongo.js
+const path = require('path')
 
 const Sentry = require('@sentry/node')
 const Tracing = require('@sentry/tracing')
@@ -34,6 +35,7 @@ app.use('/menu', express.static('public'))
 app.use('/profile', express.static('public'))
 
 
+
 Sentry.init({
   dsn: 'https://d67d64d4595c432683cc5e9ade2e8a5a@o1037870.ingest.sentry.io/6006005',
   integrations: [
@@ -62,6 +64,9 @@ app.use('/api/login', loginUserRouter)
 app.use('/api/login-business', loginBusinessRouter)
 app.use('/api/orders', ordersRouter)
 
+app.use((req, res, next) => {
+  res.sendFile(path.join(__dirname, "public", "index.html"));
+});
 if (process.env.NODE_ENV === 'test') {
   const testingRouter = require('./controllers/testing')
   app.use('/api/testing', testingRouter)
@@ -71,6 +76,7 @@ app.use(notFound)
 
 // The error handler must be before any other error middleware and after all controllers
 app.use(Sentry.Handlers.errorHandler())
+
 
 app.use(handleErrors)
 

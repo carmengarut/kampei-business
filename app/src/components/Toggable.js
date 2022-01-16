@@ -1,6 +1,5 @@
 import React, { forwardRef, useImperativeHandle, useState } from 'react'
 import propTypes from 'prop-types'
-import FontAwesome from 'react-fontawesome'
 
 import '../css/toggable.css'
 
@@ -22,8 +21,8 @@ const Toggable = forwardRef(({ children, buttonLabel = 'show' }, ref) => {
     <div className='t-container'>
       <button type='button' className='t-header' onClick={toggleVisibility}>
         <div className='t-angle'>{visible
-          ? <FontAwesome name='minus' />
-          : <FontAwesome name='plus' />}
+          ? <i className='fas fa-minus' />
+          : <i className='fas fa-plus' />}
         </div>
         <div>
           {buttonLabel}
