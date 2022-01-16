@@ -29,7 +29,7 @@ loginBusinessRouter.post('/', async (request, response) => {
       businessForToken,
       process.env.SECRET,
       {
-        expiresIn: 60 * 60 * 24 * 7
+        expiresIn: 60 * 60 * 24 * 365
       })
 
     response.send({

@@ -4093,6 +4093,8 @@ function Menu() {
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_MenuSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
           category: "blendedDrinks"
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_MenuSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          category: "beers"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_MenuSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
           category: "softDrinks"
         })]
       }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("div", {
@@ -4112,6 +4114,11 @@ function Menu() {
           children: t('menu.create_your_menu')
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_MenuSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
           category: "blendedDrinks",
+          checkbox: true,
+          menu: menu,
+          setMenu: setMenu
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_11__.jsx)(_components_MenuSection__WEBPACK_IMPORTED_MODULE_4__["default"], {
+          category: "beers",
           checkbox: true,
           menu: menu,
           setMenu: setMenu
@@ -4990,6 +4997,11 @@ function EditMenu() {
           children: t('menu.edit_your_menu')
         }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)("br", {}), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_MenuSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
           category: "blendedDrinks",
+          checkbox: true,
+          menu: menu,
+          setMenu: setMenu
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_10__.jsx)(_MenuSection__WEBPACK_IMPORTED_MODULE_6__["default"], {
+          category: "beers",
           checkbox: true,
           menu: menu,
           setMenu: setMenu
@@ -6654,11 +6666,62 @@ const orderAlphabetically = (objectA, objectB) => {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var _public_blendedDrinks_beefeater_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/blendedDrinks/beefeater.png */ "./src/public/blendedDrinks/beefeater.png");
-/* harmony import */ var _public_blendedDrinks_barcelo_png__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/blendedDrinks/barcelo.png */ "./src/public/blendedDrinks/barcelo.png");
-/* harmony import */ var _public_blendedDrinks_johnnieWalker_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/blendedDrinks/johnnieWalker.png */ "./src/public/blendedDrinks/johnnieWalker.png");
-/* harmony import */ var _public_softDrinks_cocacola_png__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/softDrinks/cocacola.png */ "./src/public/softDrinks/cocacola.png");
-/* harmony import */ var _public_softDrinks_fantaNaranja_png__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/softDrinks/fantaNaranja.png */ "./src/public/softDrinks/fantaNaranja.png");
-/* harmony import */ var _public_softDrinks_sprite_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/softDrinks/sprite.png */ "./src/public/softDrinks/sprite.png");
+/* harmony import */ var _public_blendedDrinks_seagram_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/blendedDrinks/seagram.jpeg */ "./src/public/blendedDrinks/seagram.jpeg");
+/* harmony import */ var _public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/blendedDrinks/ballantines.jpg */ "./src/public/blendedDrinks/ballantines.jpg");
+/* harmony import */ var _public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _public_blendedDrinks_smirnoff_jpeg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/blendedDrinks/smirnoff.jpeg */ "./src/public/blendedDrinks/smirnoff.jpeg");
+/* harmony import */ var _public_blendedDrinks_absolut_jpeg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/blendedDrinks/absolut.jpeg */ "./src/public/blendedDrinks/absolut.jpeg");
+/* harmony import */ var _public_blendedDrinks_jackDaniels_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/blendedDrinks/jackDaniels.png */ "./src/public/blendedDrinks/jackDaniels.png");
+/* harmony import */ var _public_blendedDrinks_blackLabel_jpeg__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../public/blendedDrinks/blackLabel.jpeg */ "./src/public/blendedDrinks/blackLabel.jpeg");
+/* harmony import */ var _public_blendedDrinks_brugal_jpeg__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../public/blendedDrinks/brugal.jpeg */ "./src/public/blendedDrinks/brugal.jpeg");
+/* harmony import */ var _public_blendedDrinks_larios_jpeg__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../public/blendedDrinks/larios.jpeg */ "./src/public/blendedDrinks/larios.jpeg");
+/* harmony import */ var _public_blendedDrinks_rives_jpeg__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../public/blendedDrinks/rives.jpeg */ "./src/public/blendedDrinks/rives.jpeg");
+/* harmony import */ var _public_blendedDrinks_tanqueray_png__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../public/blendedDrinks/tanqueray.png */ "./src/public/blendedDrinks/tanqueray.png");
+/* harmony import */ var _public_blendedDrinks_barcelo_png__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../public/blendedDrinks/barcelo.png */ "./src/public/blendedDrinks/barcelo.png");
+/* harmony import */ var _public_blendedDrinks_johnnieWalker_png__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ../public/blendedDrinks/johnnieWalker.png */ "./src/public/blendedDrinks/johnnieWalker.png");
+/* harmony import */ var _public_softDrinks_cocacola_png__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ../public/softDrinks/cocacola.png */ "./src/public/softDrinks/cocacola.png");
+/* harmony import */ var _public_softDrinks_cocacolaZero_jpeg__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ../public/softDrinks/cocacolaZero.jpeg */ "./src/public/softDrinks/cocacolaZero.jpeg");
+/* harmony import */ var _public_softDrinks_fantaLimon_jpeg__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ../public/softDrinks/fantaLimon.jpeg */ "./src/public/softDrinks/fantaLimon.jpeg");
+/* harmony import */ var _public_softDrinks_fantaNaranja_png__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(/*! ../public/softDrinks/fantaNaranja.png */ "./src/public/softDrinks/fantaNaranja.png");
+/* harmony import */ var _public_softDrinks_monster_jpeg__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(/*! ../public/softDrinks/monster.jpeg */ "./src/public/softDrinks/monster.jpeg");
+/* harmony import */ var _public_softDrinks_pepsi_png__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(/*! ../public/softDrinks/pepsi.png */ "./src/public/softDrinks/pepsi.png");
+/* harmony import */ var _public_softDrinks_redbull_jpeg__WEBPACK_IMPORTED_MODULE_20__ = __webpack_require__(/*! ../public/softDrinks/redbull.jpeg */ "./src/public/softDrinks/redbull.jpeg");
+/* harmony import */ var _public_softDrinks_sevenup_jpeg__WEBPACK_IMPORTED_MODULE_21__ = __webpack_require__(/*! ../public/softDrinks/sevenup.jpeg */ "./src/public/softDrinks/sevenup.jpeg");
+/* harmony import */ var _public_softDrinks_sprite_png__WEBPACK_IMPORTED_MODULE_22__ = __webpack_require__(/*! ../public/softDrinks/sprite.png */ "./src/public/softDrinks/sprite.png");
+/* harmony import */ var _public_softDrinks_tonicaSchweppes_jpeg__WEBPACK_IMPORTED_MODULE_23__ = __webpack_require__(/*! ../public/softDrinks/tonicaSchweppes.jpeg */ "./src/public/softDrinks/tonicaSchweppes.jpeg");
+/* harmony import */ var _public_beers_ca_a_jpeg__WEBPACK_IMPORTED_MODULE_24__ = __webpack_require__(/*! ../public/beers/caña.jpeg */ "./src/public/beers/caña.jpeg");
+/* harmony import */ var _public_beers_coronita_jpeg__WEBPACK_IMPORTED_MODULE_25__ = __webpack_require__(/*! ../public/beers/coronita.jpeg */ "./src/public/beers/coronita.jpeg");
+/* harmony import */ var _public_beers_cruzcampo_jpeg__WEBPACK_IMPORTED_MODULE_26__ = __webpack_require__(/*! ../public/beers/cruzcampo.jpeg */ "./src/public/beers/cruzcampo.jpeg");
+/* harmony import */ var _public_beers_desperados_jpeg__WEBPACK_IMPORTED_MODULE_27__ = __webpack_require__(/*! ../public/beers/desperados.jpeg */ "./src/public/beers/desperados.jpeg");
+/* harmony import */ var _public_beers_elAguila_jpeg__WEBPACK_IMPORTED_MODULE_28__ = __webpack_require__(/*! ../public/beers/elAguila.jpeg */ "./src/public/beers/elAguila.jpeg");
+/* harmony import */ var _public_beers_estrellaGalicia_png__WEBPACK_IMPORTED_MODULE_29__ = __webpack_require__(/*! ../public/beers/estrellaGalicia.png */ "./src/public/beers/estrellaGalicia.png");
+/* harmony import */ var _public_beers_heineken_jpeg__WEBPACK_IMPORTED_MODULE_30__ = __webpack_require__(/*! ../public/beers/heineken.jpeg */ "./src/public/beers/heineken.jpeg");
+/* harmony import */ var _public_beers_vasoSidra_jpeg__WEBPACK_IMPORTED_MODULE_31__ = __webpack_require__(/*! ../public/beers/vasoSidra.jpeg */ "./src/public/beers/vasoSidra.jpeg");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6669,9 +6732,23 @@ __webpack_require__.r(__webpack_exports__);
 
 const useItems = () => {
   const [menu, setMenu] = (0,react__WEBPACK_IMPORTED_MODULE_0__.useState)([{
+    name: 'Absolut',
+    value: true,
+    image: _public_blendedDrinks_absolut_jpeg__WEBPACK_IMPORTED_MODULE_5__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Ballantines',
+    value: true,
+    image: (_public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3___default()),
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
     name: 'Barceló',
     value: true,
-    image: _public_blendedDrinks_barcelo_png__WEBPACK_IMPORTED_MODULE_2__["default"],
+    image: _public_blendedDrinks_barcelo_png__WEBPACK_IMPORTED_MODULE_12__["default"],
     price: '',
     category: 'blendedDrinks',
     subcategory: 'alcohol'
@@ -6683,51 +6760,246 @@ const useItems = () => {
     category: 'blendedDrinks',
     subcategory: 'alcohol'
   }, {
+    name: 'Black Label',
+    value: true,
+    image: _public_blendedDrinks_blackLabel_jpeg__WEBPACK_IMPORTED_MODULE_7__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Brugal',
+    value: true,
+    image: _public_blendedDrinks_brugal_jpeg__WEBPACK_IMPORTED_MODULE_8__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Jack Daniels',
+    value: true,
+    image: _public_blendedDrinks_jackDaniels_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
     name: 'Johnnie Walker',
     value: true,
-    image: _public_blendedDrinks_johnnieWalker_png__WEBPACK_IMPORTED_MODULE_3__["default"],
+    image: _public_blendedDrinks_johnnieWalker_png__WEBPACK_IMPORTED_MODULE_13__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Larios',
+    value: true,
+    image: _public_blendedDrinks_larios_jpeg__WEBPACK_IMPORTED_MODULE_9__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Rives',
+    value: true,
+    image: _public_blendedDrinks_rives_jpeg__WEBPACK_IMPORTED_MODULE_10__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Seagram',
+    value: true,
+    image: _public_blendedDrinks_seagram_jpeg__WEBPACK_IMPORTED_MODULE_2__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Smirnoff',
+    value: true,
+    image: _public_blendedDrinks_smirnoff_jpeg__WEBPACK_IMPORTED_MODULE_4__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'alcohol'
+  }, {
+    name: 'Tanqueray',
+    value: true,
+    image: _public_blendedDrinks_tanqueray_png__WEBPACK_IMPORTED_MODULE_11__["default"],
     price: '',
     category: 'blendedDrinks',
     subcategory: 'alcohol'
   }, {
     name: 'Cocacola (Añad)',
     value: true,
-    image: _public_softDrinks_cocacola_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+    image: _public_softDrinks_cocacola_png__WEBPACK_IMPORTED_MODULE_14__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'Cocacola Zero (Añad)',
+    value: true,
+    image: _public_softDrinks_cocacolaZero_jpeg__WEBPACK_IMPORTED_MODULE_15__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'Fanta Limón (Añad)',
+    value: true,
+    image: _public_softDrinks_fantaLimon_jpeg__WEBPACK_IMPORTED_MODULE_16__["default"],
     price: '',
     category: 'blendedDrinks',
     subcategory: 'soda'
   }, {
     name: 'Fanta Naranja (Añad)',
     value: true,
-    image: _public_softDrinks_fantaNaranja_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+    image: _public_softDrinks_fantaNaranja_png__WEBPACK_IMPORTED_MODULE_17__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'Monster (Añad)',
+    value: true,
+    image: _public_softDrinks_monster_jpeg__WEBPACK_IMPORTED_MODULE_18__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'Pepsi (Añad)',
+    value: true,
+    image: _public_softDrinks_pepsi_png__WEBPACK_IMPORTED_MODULE_19__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'Redbull (Añad)',
+    value: true,
+    image: _public_softDrinks_redbull_jpeg__WEBPACK_IMPORTED_MODULE_20__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'SevenUp (Añad)',
+    value: true,
+    image: _public_softDrinks_sevenup_jpeg__WEBPACK_IMPORTED_MODULE_21__["default"],
     price: '',
     category: 'blendedDrinks',
     subcategory: 'soda'
   }, {
     name: 'Sprite (Añad)',
     value: true,
-    image: _public_softDrinks_sprite_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+    image: _public_softDrinks_sprite_png__WEBPACK_IMPORTED_MODULE_22__["default"],
+    price: '',
+    category: 'blendedDrinks',
+    subcategory: 'soda'
+  }, {
+    name: 'Tónica Schweppes (Añad)',
+    value: true,
+    image: _public_softDrinks_tonicaSchweppes_jpeg__WEBPACK_IMPORTED_MODULE_23__["default"],
     price: '',
     category: 'blendedDrinks',
     subcategory: 'soda'
   }, {
     name: 'Cocacola',
     value: true,
-    image: _public_softDrinks_cocacola_png__WEBPACK_IMPORTED_MODULE_4__["default"],
+    image: _public_softDrinks_cocacola_png__WEBPACK_IMPORTED_MODULE_14__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'Cocacola Zero',
+    value: true,
+    image: _public_softDrinks_cocacolaZero_jpeg__WEBPACK_IMPORTED_MODULE_15__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'Fanta Limón',
+    value: true,
+    image: _public_softDrinks_fantaLimon_jpeg__WEBPACK_IMPORTED_MODULE_16__["default"],
     price: '',
     category: 'softDrinks'
   }, {
     name: 'Fanta Naranja',
     value: true,
-    image: _public_softDrinks_fantaNaranja_png__WEBPACK_IMPORTED_MODULE_5__["default"],
+    image: _public_softDrinks_fantaNaranja_png__WEBPACK_IMPORTED_MODULE_17__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'Monster',
+    value: true,
+    image: _public_softDrinks_monster_jpeg__WEBPACK_IMPORTED_MODULE_18__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'Pepsi',
+    value: true,
+    image: _public_softDrinks_pepsi_png__WEBPACK_IMPORTED_MODULE_19__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'Redbull',
+    value: true,
+    image: _public_softDrinks_redbull_jpeg__WEBPACK_IMPORTED_MODULE_20__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'SevenUp',
+    value: true,
+    image: _public_softDrinks_sevenup_jpeg__WEBPACK_IMPORTED_MODULE_21__["default"],
     price: '',
     category: 'softDrinks'
   }, {
     name: 'Sprite',
     value: true,
-    image: _public_softDrinks_sprite_png__WEBPACK_IMPORTED_MODULE_6__["default"],
+    image: _public_softDrinks_sprite_png__WEBPACK_IMPORTED_MODULE_22__["default"],
     price: '',
     category: 'softDrinks'
+  }, {
+    name: 'Tónica Schweppes',
+    value: true,
+    image: _public_softDrinks_tonicaSchweppes_jpeg__WEBPACK_IMPORTED_MODULE_23__["default"],
+    price: '',
+    category: 'softDrinks'
+  }, {
+    name: 'Caña Barril',
+    value: true,
+    image: _public_beers_ca_a_jpeg__WEBPACK_IMPORTED_MODULE_24__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'Coronita',
+    value: true,
+    image: _public_beers_coronita_jpeg__WEBPACK_IMPORTED_MODULE_25__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'Cruzcampo',
+    value: true,
+    image: _public_beers_cruzcampo_jpeg__WEBPACK_IMPORTED_MODULE_26__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'Desperados',
+    value: true,
+    image: _public_beers_desperados_jpeg__WEBPACK_IMPORTED_MODULE_27__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'El Águila (sin filtrar)',
+    value: true,
+    image: _public_beers_elAguila_jpeg__WEBPACK_IMPORTED_MODULE_28__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'Estrella Galicia',
+    value: true,
+    image: _public_beers_estrellaGalicia_png__WEBPACK_IMPORTED_MODULE_29__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'Heineken',
+    value: true,
+    image: _public_beers_heineken_jpeg__WEBPACK_IMPORTED_MODULE_30__["default"],
+    price: '',
+    category: 'beers'
+  }, {
+    name: 'Cerveza Barril Vaso Sidra',
+    value: true,
+    image: _public_beers_vasoSidra_jpeg__WEBPACK_IMPORTED_MODULE_31__["default"],
+    price: '',
+    category: 'beers'
   }]);
   return {
     menu,
@@ -9344,6 +9616,18 @@ function triggerEvent(node, eventName, bubbles, cancelable) {
 
 /***/ }),
 
+/***/ "./src/public/beers/estrellaGalicia.png":
+/*!**********************************************!*\
+  !*** ./src/public/beers/estrellaGalicia.png ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/estrellaGalicia.png");
+
+/***/ }),
+
 /***/ "./src/public/blendedDrinks.png":
 /*!**************************************!*\
   !*** ./src/public/blendedDrinks.png ***!
@@ -9380,6 +9664,18 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/public/blendedDrinks/jackDaniels.png":
+/*!**************************************************!*\
+  !*** ./src/public/blendedDrinks/jackDaniels.png ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/jackDaniels.png");
+
+/***/ }),
+
 /***/ "./src/public/blendedDrinks/johnnieWalker.png":
 /*!****************************************************!*\
   !*** ./src/public/blendedDrinks/johnnieWalker.png ***!
@@ -9389,6 +9685,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/johnnieWalker.png");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/tanqueray.png":
+/*!************************************************!*\
+  !*** ./src/public/blendedDrinks/tanqueray.png ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/tanqueray.png");
 
 /***/ }),
 
@@ -9425,6 +9733,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/fantaNaranja.png");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/pepsi.png":
+/*!*****************************************!*\
+  !*** ./src/public/softDrinks/pepsi.png ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/pepsi.png");
 
 /***/ }),
 
@@ -9644,6 +9964,174 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./src/public/beers/caña.jpeg":
+/*!************************************!*\
+  !*** ./src/public/beers/caña.jpeg ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/caña.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/beers/coronita.jpeg":
+/*!****************************************!*\
+  !*** ./src/public/beers/coronita.jpeg ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/coronita.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/beers/cruzcampo.jpeg":
+/*!*****************************************!*\
+  !*** ./src/public/beers/cruzcampo.jpeg ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/cruzcampo.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/beers/desperados.jpeg":
+/*!******************************************!*\
+  !*** ./src/public/beers/desperados.jpeg ***!
+  \******************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/desperados.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/beers/elAguila.jpeg":
+/*!****************************************!*\
+  !*** ./src/public/beers/elAguila.jpeg ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/elAguila.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/beers/heineken.jpeg":
+/*!****************************************!*\
+  !*** ./src/public/beers/heineken.jpeg ***!
+  \****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/heineken.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/beers/vasoSidra.jpeg":
+/*!*****************************************!*\
+  !*** ./src/public/beers/vasoSidra.jpeg ***!
+  \*****************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/vasoSidra.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/absolut.jpeg":
+/*!***********************************************!*\
+  !*** ./src/public/blendedDrinks/absolut.jpeg ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/absolut.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/blackLabel.jpeg":
+/*!**************************************************!*\
+  !*** ./src/public/blendedDrinks/blackLabel.jpeg ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/blackLabel.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/brugal.jpeg":
+/*!**********************************************!*\
+  !*** ./src/public/blendedDrinks/brugal.jpeg ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/brugal.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/larios.jpeg":
+/*!**********************************************!*\
+  !*** ./src/public/blendedDrinks/larios.jpeg ***!
+  \**********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/larios.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/rives.jpeg":
+/*!*********************************************!*\
+  !*** ./src/public/blendedDrinks/rives.jpeg ***!
+  \*********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/rives.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/seagram.jpeg":
+/*!***********************************************!*\
+  !*** ./src/public/blendedDrinks/seagram.jpeg ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/seagram.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/smirnoff.jpeg":
+/*!************************************************!*\
+  !*** ./src/public/blendedDrinks/smirnoff.jpeg ***!
+  \************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/smirnoff.jpeg");
+
+/***/ }),
+
 /***/ "./src/public/soda.jpeg":
 /*!******************************!*\
   !*** ./src/public/soda.jpeg ***!
@@ -9653,6 +10141,78 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/soda.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/cocacolaZero.jpeg":
+/*!*************************************************!*\
+  !*** ./src/public/softDrinks/cocacolaZero.jpeg ***!
+  \*************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/cocacolaZero.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/fantaLimon.jpeg":
+/*!***********************************************!*\
+  !*** ./src/public/softDrinks/fantaLimon.jpeg ***!
+  \***********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/fantaLimon.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/monster.jpeg":
+/*!********************************************!*\
+  !*** ./src/public/softDrinks/monster.jpeg ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/monster.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/redbull.jpeg":
+/*!********************************************!*\
+  !*** ./src/public/softDrinks/redbull.jpeg ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/redbull.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/sevenup.jpeg":
+/*!********************************************!*\
+  !*** ./src/public/softDrinks/sevenup.jpeg ***!
+  \********************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/sevenup.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/softDrinks/tonicaSchweppes.jpeg":
+/*!****************************************************!*\
+  !*** ./src/public/softDrinks/tonicaSchweppes.jpeg ***!
+  \****************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/tonicaSchweppes.jpeg");
 
 /***/ }),
 
@@ -54616,6 +55176,16 @@ function valueEqual(a, b) {
 
 /***/ }),
 
+/***/ "./src/public/blendedDrinks/ballantines.jpg":
+/*!**************************************************!*\
+  !*** ./src/public/blendedDrinks/ballantines.jpg ***!
+  \**************************************************/
+/***/ (function() {
+
+throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n(Source code omitted for this binary file)");
+
+/***/ }),
+
 /***/ "data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23fff%27/%3e%3c/svg%3e":
 /*!******************************************************************************************************************************************************!*\
   !*** data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%27-4 -4 8 8%27%3e%3ccircle r=%272%27 fill=%27%23fff%27/%3e%3c/svg%3e ***!
@@ -58387,7 +58957,7 @@ function _objectWithoutPropertiesLoose(source, excluded) {
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"header_web":{"brand_name":"Kampei","sign_up":"Sign Up","sign_in":"Sign In","es":"Español","en":"English"},"landing_page":{"h1":"Increase your customers spending","h2":"Helping bars’ owners boost their revenue by letting the customers order and pay without the need of a waiter.","button_1":"How we do it?","button_2":"Start Now","box_1_title":"Reduce the time per customer per table","box_1_content":"Your customers will consume faster reducing the waiting time for serving, ordering and billing. You will have more customers per day.","box_2_title":"Increase the spending per person","box_2_content":"You customers won’t need to wait for the waiter to order and deliver the drinks. This will result in more spending per customer.","box_3_title":"Let the world know where you are","box_3_content":"Potential customers will know when you are open, what type of music you have and will be able to make online reservations."},"footer":{"contact_details":"Contact +34 617 99 85 94"},"sign_up":{"title":"Let\'s get started","name":"Name","surname":"Surname","email":"Email","password":"Password","terms_and_conditions":"I agree to terms and conditions","create_account":"Create Account","have_account":"Have an account? ","sign_in":"Sign In"},"sign_in":{"title":"Log in to your account","email":"Email","password":"Password","login":"Log In","dont_have_account":"Don\'t have an account? ","sign_up":"Sign Up"},"menu":{"menu":"Menu","edit_menu":"Edit Menu","menu_details":"Menu:","create_your_menu":"Create your menu:","save_menu":"Save Menu","edit_your_menu":"Edit your menu:","accept":"Accept","menu_edited":"Successfully edited!","successfully_edited":"Your menu has been successfully edited.","menu_created":"Successfully created!","successfully_created":"Your menu has been successfully created.","download_qr":"Download QR"},"menu_section":{"blendedDrinks":"Blended drinks","softDrinks":"Soft drinks","alcohol":"Alcohol","soda":"Soda"},"menu_customers":{"menu":"Menu:","blended_drinks":"Blended drinks","beers":"Beers","soft_drinks":"Soft drinks","see_cart":"See cart"},"menu_category":{"blendedDrinks":"Blended drinks","beers":"Beers","softDrinks":"Soft drinks","see_cart":"See cart"},"cart":{"your_cart":"Your cart:","subtotal":"Subtotal","checkout":"Go to checkout"},"item":{"add":"Add","to_cart":"to cart","select_mix":"Select accompaniment"},"edit_cart_item":{"remove_item":"Remove item","update_cart":"Update cart"},"orders":{"orders":"Orders"},"header":{"menu":"Menu","orders":"Orders","profile":"Profile"},"users_page":{"users":"Users","search":"Search user...","trust_rate":"% trust"},"profile_page":{"profile":"Profile","edit_your_account_info":"Edit your account information:","name":"Name","surname":"Surname","email":"Email","logout":"Logout","save_changes":"Save Changes"},"create_contract_page":{"contracts":"Contracts","title":"Create a new contract:","contract_title":"Contract Title","contract_title_placeholder":"Introduce the title of the contract","content":"Contract Content (Describe all the details and clauses of the contract)","content_placeholder":"Introduce the content of the contract","email":"Email of the person you want to send the contract","email_placeholder":"Introduce the email of the person you want to send the contract","save":"Create Contract","dont_have_account":"User doesn\'t have an eTrust account","want_to_send_invitation":" doesn\'t have an eTrust account. Do you want to send him and invitation?","invite_user":"Invite User","cancel":"Cancel"},"deal_details":{"contract_details":"Contract Details - ","contract_status":"Contract status: ","contract_members":"Contract members:","saved":"Saved!","contract_successfully_edited_1":"The contract ","contract_successfully_edited_2":" has been successfully edited. The other member of the contract has been notified about the change.","go_to_contracts":"Go to contracts","continue_editing":"Continue editing"},"deal_details_member_card":{"creator":"Creator","signed":"Signed","not_signed":"Not Signed","invitation_pending":"(Invitation pending)"},"deal_details_form":{"contract_details":"Contract details :","title":"Contract Title","title_placeholder":"Introduce the title of the contract","content":"Contract Content (Describe all the details and clauses of the contract)","content_placeholder":"Introduce the content of the contract","creation_date":"Creation date: ","propose_changes":"Propose Changes","sign_now":"Sign Now"},"ratings":{"contract_ratings":"Contract ratings: ","submit_rating":"Submit Rating","no_ratings":"No ratings added"},"rating_form":{"contracts":"Contracts","rate_contract":"Rate the fulfillment of the contract:","yes":"Yes","no":"No","did_person_fulfill_1":"Did ","did_person_fulfill_2":" fulfill the contract?","description":"Comments","description_placeholder":"Introduce comments","save":"Add rating","rating_added":"Rating added!","successfully_added":"Your rating has been successfully added.","accept":"Accept"}}');
+module.exports = JSON.parse('{"header_web":{"brand_name":"Kampei","sign_up":"Sign Up","sign_in":"Sign In","es":"Español","en":"English"},"landing_page":{"h1":"Increase your customers spending","h2":"Helping bars’ owners boost their revenue by letting the customers order and pay without the need of a waiter.","button_1":"How we do it?","button_2":"Start Now","box_1_title":"Reduce the time per customer per table","box_1_content":"Your customers will consume faster reducing the waiting time for serving, ordering and billing. You will have more customers per day.","box_2_title":"Increase the spending per person","box_2_content":"You customers won’t need to wait for the waiter to order and deliver the drinks. This will result in more spending per customer.","box_3_title":"Let the world know where you are","box_3_content":"Potential customers will know when you are open, what type of music you have and will be able to make online reservations."},"footer":{"contact_details":"Contact +34 617 99 85 94"},"sign_up":{"title":"Let\'s get started","name":"Name","surname":"Surname","email":"Email","password":"Password","terms_and_conditions":"I agree to terms and conditions","create_account":"Create Account","have_account":"Have an account? ","sign_in":"Sign In"},"sign_in":{"title":"Log in to your account","email":"Email","password":"Password","login":"Log In","dont_have_account":"Don\'t have an account? ","sign_up":"Sign Up"},"menu":{"menu":"Menu","edit_menu":"Edit Menu","menu_details":"Menu:","create_your_menu":"Create your menu:","save_menu":"Save Menu","edit_your_menu":"Edit your menu:","accept":"Accept","menu_edited":"Successfully edited!","successfully_edited":"Your menu has been successfully edited.","menu_created":"Successfully created!","successfully_created":"Your menu has been successfully created.","download_qr":"Download QR"},"menu_section":{"blendedDrinks":"Blended drinks","softDrinks":"Soft drinks","alcohol":"Alcohol","soda":"Soda","beers":"Beers"},"menu_customers":{"menu":"Menu:","blended_drinks":"Blended drinks","beers":"Beers","soft_drinks":"Soft drinks","see_cart":"See cart"},"menu_category":{"blendedDrinks":"Blended drinks","beers":"Beers","softDrinks":"Soft drinks","see_cart":"See cart"},"cart":{"your_cart":"Your cart:","subtotal":"Subtotal","checkout":"Go to checkout"},"item":{"add":"Add","to_cart":"to cart","select_mix":"Select accompaniment"},"edit_cart_item":{"remove_item":"Remove item","update_cart":"Update cart"},"orders":{"orders":"Orders"},"header":{"menu":"Menu","orders":"Orders","profile":"Profile"},"users_page":{"users":"Users","search":"Search user...","trust_rate":"% trust"},"profile_page":{"profile":"Profile","edit_your_account_info":"Edit your account information:","name":"Name","surname":"Surname","email":"Email","logout":"Logout","save_changes":"Save Changes"},"create_contract_page":{"contracts":"Contracts","title":"Create a new contract:","contract_title":"Contract Title","contract_title_placeholder":"Introduce the title of the contract","content":"Contract Content (Describe all the details and clauses of the contract)","content_placeholder":"Introduce the content of the contract","email":"Email of the person you want to send the contract","email_placeholder":"Introduce the email of the person you want to send the contract","save":"Create Contract","dont_have_account":"User doesn\'t have an eTrust account","want_to_send_invitation":" doesn\'t have an eTrust account. Do you want to send him and invitation?","invite_user":"Invite User","cancel":"Cancel"},"deal_details":{"contract_details":"Contract Details - ","contract_status":"Contract status: ","contract_members":"Contract members:","saved":"Saved!","contract_successfully_edited_1":"The contract ","contract_successfully_edited_2":" has been successfully edited. The other member of the contract has been notified about the change.","go_to_contracts":"Go to contracts","continue_editing":"Continue editing"},"deal_details_member_card":{"creator":"Creator","signed":"Signed","not_signed":"Not Signed","invitation_pending":"(Invitation pending)"},"deal_details_form":{"contract_details":"Contract details :","title":"Contract Title","title_placeholder":"Introduce the title of the contract","content":"Contract Content (Describe all the details and clauses of the contract)","content_placeholder":"Introduce the content of the contract","creation_date":"Creation date: ","propose_changes":"Propose Changes","sign_now":"Sign Now"},"ratings":{"contract_ratings":"Contract ratings: ","submit_rating":"Submit Rating","no_ratings":"No ratings added"},"rating_form":{"contracts":"Contracts","rate_contract":"Rate the fulfillment of the contract:","yes":"Yes","no":"No","did_person_fulfill_1":"Did ","did_person_fulfill_2":" fulfill the contract?","description":"Comments","description_placeholder":"Introduce comments","save":"Add rating","rating_added":"Rating added!","successfully_added":"Your rating has been successfully added.","accept":"Accept"}}');
 
 /***/ }),
 
@@ -58398,7 +58968,7 @@ module.exports = JSON.parse('{"header_web":{"brand_name":"Kampei","sign_up":"Sig
 /***/ (function(module) {
 
 "use strict";
-module.exports = JSON.parse('{"header_web":{"brand_name":"Kampei","sign_up":"Regístrate","sign_in":"Iniciar Sesión","es":"Español","en":"English"},"landing_page":{"h1":"Aumenta el consumo de tus clientes","h2":"Ayudamos a los dueños de los bares a aumentar sus beneficios permitiendo a los clientes pedir y pagar sin necesidad de un camarero.","button_1":"¿Cómo lo hacemos?","button_2":"Empezar Ahora","box_1_title":"Reduce el tiempo que un cliente ocupa una mesa","box_1_content":"Tus clientes cosumirán más rapido al reducir el tiempo de espera para pedir, servir y pagar la cuenta. Tendrás más clientes por día.","box_2_title":"Aumenta el consumo por persona","box_2_content":"Tus clientes no tendrán que esperar al camarero para pedir y entregar las consumiciones. Esto resultará en un aumento del consumo por cliente.","box_3_title":"Deja que el mundo sepa donde estás","box_3_content":"Potentiales clientes sabrán cuando estás abierto, qué tipo de música pones, y podrán hacer reservados online."},"footer":{"contact_details":"Contacto +34 617 99 85 94"},"sign_up":{"title":"Vamos a empezar","name":"Nombre","surname":"Apellidos","email":"Email","password":"Contraseña","terms_and_conditions":"Acepto los términos y condiciones","create_account":"Crear Cuenta","have_account":"¿Ya tienes una cuenta? ","sign_in":"Iniciar sesión"},"sign_in":{"title":"Inicia sesión en tu cuenta","email":"Email","password":"Contraseña","login":"Iniciar Sesión","dont_have_account":"¿No tienes cuenta? ","sign_up":"Regístrate"},"menu":{"menu":"Carta","edit_menu":"Editar Carta","menu_details":"Carta:","create_your_menu":"Crea tu carta:","save_menu":"Guardar Carta","edit_your_menu":"Edita tu carta:","accept":"Aceptar","menu_edited":"¡Carta editada!","successfully_edited":"Tu carta ha sido editada correctamente.","menu_created":"¡Carta creada!","successfully_created":"Tu carta ha sido creada correctamente.","download_qr":"Descargar QR"},"menu_section":{"blendedDrinks":"Copas","softDrinks":"Refrescos","alcohol":"Alcohol","soda":"Acompañamiento"},"menu_customers":{"menu":"Carta:","blended_drinks":"Copas","beers":"Cervezas","soft_drinks":"Refrescos","see_cart":"Ver carrito"},"menu_category":{"blendedDrinks":"Copas","beers":"Cervezas","softDrinks":"Refrescos","see_cart":"Ver carrito"},"cart":{"your_cart":"Tu carrito:","subtotal":"Subtotal","checkout":"Ir al pago"},"item":{"add":"Añadir","to_cart":"al carrito","select_mix":"Selecciona acompañamiento"},"edit_cart_item":{"remove_item":"Eliminar artículo","update_cart":"Actualizar carrito"},"orders":{"orders":"Comandas"},"header":{"menu":"Carta","orders":"Comandas","profile":"Perfil"},"users_page":{"users":"Usuarios","search":"Buscar usuario...","trust_rate":"% confianza"},"profile_page":{"profile":"Perfil","edit_your_account_info":"Edita la información de tu cuenta:","name":"Nombre","surname":"Apellidos","email":"Email","logout":"Cerrar Sesión","save_changes":"Guardar Cambios"},"create_contract_page":{"contracts":"Contratos","title":"Crea un nuevo contrato:","contract_title":"Título del contrato","contract_title_placeholder":"Introduce el título del contrato","content":"Contenido del contrato (Describe los detalles y cláusulas del contrato)","content_placeholder":"Introduce el contenido del contrato","email":"Email de la persona a la que quieres enviar el contrato","email_placeholder":"Introduce el email de la persona a la que quieres enviar el contrato","save":"Crear Contrato","dont_have_account":"El usuario no tiene cuenta de eTrust","want_to_send_invitation":" no tiene cuenta de eTrust. ¿Quieres enviarle una invitación?","invite_user":"Invitar Usuario","cancel":"Cancelar"},"deal_details":{"contract_details":"Detalles del Contrato - ","contract_status":"Estado del contrato: ","contract_members":"Miembros del contrato:","saved":"¡Guardado!","contract_successfully_edited_1":"El contrato ","contract_successfully_edited_2":" se ha editado correctamente. El otro miembro del contrato ha sido notificado del cambio.","go_to_contracts":"Ir a contratos","continue_editing":"Continuar editando"},"deal_details_member_card":{"creator":"Creador","signed":"Firmado","not_signed":"No Firmado","invitation_pending":"(Invitation pending)"},"deal_details_form":{"contract_details":"Detalles del contrato :","title":"Título del contrato","title_placeholder":"Introduce el título del contrato","content":"Contenido del contrato (Describe los detalles y cláusulas del contrato)","content_placeholder":"Introduce el contenido del contrato","creation_date":"Fecha de creación: ","propose_changes":"Proponer Cambios","sign_now":"Firmar Ahora"},"ratings":{"contract_ratings":"Evaluaciones del contrato: ","submit_rating":"Evaluar contrato","no_ratings":"No hay evaluaciones añadidas"},"rating_form":{"contracts":"Contratos","rate_contract":"Evalua el cumplimiento del contrato por la otra parte:","yes":"Sí","no":"No","did_person_fulfill_1":"¿Cumplió ","did_person_fulfill_2":" el contrato?","description":"Comentarios","description_placeholder":"Introduce tus comentarios","save":"Añadir evaluación","rating_added":"¡Evaluación añadida!","successfully_added":"Tu evaluación ha sido añadida correctamente.","accept":"Aceptar"}}');
+module.exports = JSON.parse('{"header_web":{"brand_name":"Kampei","sign_up":"Regístrate","sign_in":"Iniciar Sesión","es":"Español","en":"English"},"landing_page":{"h1":"Aumenta el consumo de tus clientes","h2":"Ayudamos a los dueños de los bares a aumentar sus beneficios permitiendo a los clientes pedir y pagar sin necesidad de un camarero.","button_1":"¿Cómo lo hacemos?","button_2":"Empezar Ahora","box_1_title":"Reduce el tiempo que un cliente ocupa una mesa","box_1_content":"Tus clientes cosumirán más rapido al reducir el tiempo de espera para pedir, servir y pagar la cuenta. Tendrás más clientes por día.","box_2_title":"Aumenta el consumo por persona","box_2_content":"Tus clientes no tendrán que esperar al camarero para pedir y entregar las consumiciones. Esto resultará en un aumento del consumo por cliente.","box_3_title":"Deja que el mundo sepa donde estás","box_3_content":"Potentiales clientes sabrán cuando estás abierto, qué tipo de música pones, y podrán hacer reservados online."},"footer":{"contact_details":"Contacto +34 617 99 85 94"},"sign_up":{"title":"Vamos a empezar","name":"Nombre","surname":"Apellidos","email":"Email","password":"Contraseña","terms_and_conditions":"Acepto los términos y condiciones","create_account":"Crear Cuenta","have_account":"¿Ya tienes una cuenta? ","sign_in":"Iniciar sesión"},"sign_in":{"title":"Inicia sesión en tu cuenta","email":"Email","password":"Contraseña","login":"Iniciar Sesión","dont_have_account":"¿No tienes cuenta? ","sign_up":"Regístrate"},"menu":{"menu":"Carta","edit_menu":"Editar Carta","menu_details":"Carta:","create_your_menu":"Crea tu carta:","save_menu":"Guardar Carta","edit_your_menu":"Edita tu carta:","accept":"Aceptar","menu_edited":"¡Carta editada!","successfully_edited":"Tu carta ha sido editada correctamente.","menu_created":"¡Carta creada!","successfully_created":"Tu carta ha sido creada correctamente.","download_qr":"Descargar QR"},"menu_section":{"blendedDrinks":"Copas","softDrinks":"Refrescos","alcohol":"Alcohol","soda":"Acompañamiento","beers":"Cervezas"},"menu_customers":{"menu":"Carta:","blended_drinks":"Copas","beers":"Cervezas","soft_drinks":"Refrescos","see_cart":"Ver carrito"},"menu_category":{"blendedDrinks":"Copas","beers":"Cervezas","softDrinks":"Refrescos","see_cart":"Ver carrito"},"cart":{"your_cart":"Tu carrito:","subtotal":"Subtotal","checkout":"Ir al pago"},"item":{"add":"Añadir","to_cart":"al carrito","select_mix":"Selecciona acompañamiento"},"edit_cart_item":{"remove_item":"Eliminar artículo","update_cart":"Actualizar carrito"},"orders":{"orders":"Comandas"},"header":{"menu":"Carta","orders":"Comandas","profile":"Perfil"},"users_page":{"users":"Usuarios","search":"Buscar usuario...","trust_rate":"% confianza"},"profile_page":{"profile":"Perfil","edit_your_account_info":"Edita la información de tu cuenta:","name":"Nombre","surname":"Apellidos","email":"Email","logout":"Cerrar Sesión","save_changes":"Guardar Cambios"},"create_contract_page":{"contracts":"Contratos","title":"Crea un nuevo contrato:","contract_title":"Título del contrato","contract_title_placeholder":"Introduce el título del contrato","content":"Contenido del contrato (Describe los detalles y cláusulas del contrato)","content_placeholder":"Introduce el contenido del contrato","email":"Email de la persona a la que quieres enviar el contrato","email_placeholder":"Introduce el email de la persona a la que quieres enviar el contrato","save":"Crear Contrato","dont_have_account":"El usuario no tiene cuenta de eTrust","want_to_send_invitation":" no tiene cuenta de eTrust. ¿Quieres enviarle una invitación?","invite_user":"Invitar Usuario","cancel":"Cancelar"},"deal_details":{"contract_details":"Detalles del Contrato - ","contract_status":"Estado del contrato: ","contract_members":"Miembros del contrato:","saved":"¡Guardado!","contract_successfully_edited_1":"El contrato ","contract_successfully_edited_2":" se ha editado correctamente. El otro miembro del contrato ha sido notificado del cambio.","go_to_contracts":"Ir a contratos","continue_editing":"Continuar editando"},"deal_details_member_card":{"creator":"Creador","signed":"Firmado","not_signed":"No Firmado","invitation_pending":"(Invitation pending)"},"deal_details_form":{"contract_details":"Detalles del contrato :","title":"Título del contrato","title_placeholder":"Introduce el título del contrato","content":"Contenido del contrato (Describe los detalles y cláusulas del contrato)","content_placeholder":"Introduce el contenido del contrato","creation_date":"Fecha de creación: ","propose_changes":"Proponer Cambios","sign_now":"Firmar Ahora"},"ratings":{"contract_ratings":"Evaluaciones del contrato: ","submit_rating":"Evaluar contrato","no_ratings":"No hay evaluaciones añadidas"},"rating_form":{"contracts":"Contratos","rate_contract":"Evalua el cumplimiento del contrato por la otra parte:","yes":"Sí","no":"No","did_person_fulfill_1":"¿Cumplió ","did_person_fulfill_2":" el contrato?","description":"Comentarios","description_placeholder":"Introduce tus comentarios","save":"Añadir evaluación","rating_added":"¡Evaluación añadida!","successfully_added":"Tu evaluación ha sido añadida correctamente.","accept":"Aceptar"}}');
 
 /***/ })
 

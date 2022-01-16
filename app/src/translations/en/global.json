@@ -59,7 +59,8 @@
         "blendedDrinks": "Blended drinks",
         "softDrinks": "Soft drinks",
         "alcohol": "Alcohol",
-        "soda": "Soda"
+        "soda": "Soda",
+        "beers": "Beers"
     },
     "menu_customers": {
         "menu": "Menu:",

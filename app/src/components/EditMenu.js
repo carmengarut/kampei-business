@@ -81,6 +81,7 @@ function EditMenu () {
           <div>{t('menu.edit_your_menu')}</div>
           <br />
           <MenuSection category='blendedDrinks' checkbox menu={menu} setMenu={setMenu} />
+          <MenuSection category='beers' checkbox menu={menu} setMenu={setMenu} />
           <MenuSection category='softDrinks' checkbox menu={menu} setMenu={setMenu} />
         </div>
         <div className='m-button-container'>

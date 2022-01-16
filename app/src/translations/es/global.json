@@ -59,7 +59,8 @@
         "blendedDrinks": "Copas",
         "softDrinks": "Refrescos",
         "alcohol": "Alcohol",
-        "soda": "Acompañamiento"
+        "soda": "Acompañamiento",
+        "beers": "Cervezas"
     },
     "menu_customers": {
         "menu": "Carta:",

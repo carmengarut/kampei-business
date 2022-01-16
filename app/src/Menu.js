@@ -85,6 +85,7 @@ export default function Menu () {
               <div>{t('menu.menu_details')}</div>
               <br />
               <MenuSection category='blendedDrinks' />
+              <MenuSection category='beers' />
               <MenuSection category='softDrinks' />
             </div>
             <div className='m-button-container'>
@@ -98,6 +99,7 @@ export default function Menu () {
               <div>{t('menu.create_your_menu')}</div>
               <br />
               <MenuSection category='blendedDrinks' checkbox menu={menu} setMenu={setMenu} />
+              <MenuSection category='beers' checkbox menu={menu} setMenu={setMenu} />
               <MenuSection category='softDrinks' checkbox menu={menu} setMenu={setMenu} />
             </div>
             <div className='m-button-container'>
