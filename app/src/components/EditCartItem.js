@@ -32,13 +32,23 @@ const EditCartItem = () => {
   }, [])
 
   const history = useHistory()
-  const count = useSelector(state => state.currentOrder).filter(itemId => itemId === id).length
-  const [counter, setCounter] = useState(count)
+  const currentOrder = useSelector(state => state.currentOrder)
+  const [counter, setCounter] = useState(currentOrder.items
+    ? currentOrder.items.find(orderItem => orderItem.id === id).count
+    : 0)
   const item = useSelector(state => state.items).find(item => item.id === id)
 
+  useEffect(() => {
+    if (currentOrder.items) {
+      setCounter(currentOrder.items.find(orderItem => orderItem.id === id).count)
+    }
+  }, [currentOrder])
   const handleClick = () => {
     dispatch(orderRemoveItem(id))
-    dispatch(orderAddItem(Array(counter).fill(id)))
+    dispatch(orderAddItem({
+      id,
+      count: counter
+    }))
     history.push(`/menu/${item.business.id}/cart`)
   }
 

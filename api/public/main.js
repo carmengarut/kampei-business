@@ -6668,7 +6668,6 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _public_blendedDrinks_beefeater_png__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../public/blendedDrinks/beefeater.png */ "./src/public/blendedDrinks/beefeater.png");
 /* harmony import */ var _public_blendedDrinks_seagram_jpeg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../public/blendedDrinks/seagram.jpeg */ "./src/public/blendedDrinks/seagram.jpeg");
 /* harmony import */ var _public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../public/blendedDrinks/ballantines.jpg */ "./src/public/blendedDrinks/ballantines.jpg");
-/* harmony import */ var _public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _public_blendedDrinks_smirnoff_jpeg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../public/blendedDrinks/smirnoff.jpeg */ "./src/public/blendedDrinks/smirnoff.jpeg");
 /* harmony import */ var _public_blendedDrinks_absolut_jpeg__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../public/blendedDrinks/absolut.jpeg */ "./src/public/blendedDrinks/absolut.jpeg");
 /* harmony import */ var _public_blendedDrinks_jackDaniels_png__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../public/blendedDrinks/jackDaniels.png */ "./src/public/blendedDrinks/jackDaniels.png");
@@ -6741,7 +6740,7 @@ const useItems = () => {
   }, {
     name: 'Ballantines',
     value: true,
-    image: (_public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3___default()),
+    image: _public_blendedDrinks_ballantines_jpg__WEBPACK_IMPORTED_MODULE_3__["default"],
     price: '',
     category: 'blendedDrinks',
     subcategory: 'alcohol'
@@ -10213,6 +10212,18 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/tonicaSchweppes.jpeg");
+
+/***/ }),
+
+/***/ "./src/public/blendedDrinks/ballantines.jpg":
+/*!**************************************************!*\
+  !*** ./src/public/blendedDrinks/ballantines.jpg ***!
+  \**************************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony default export */ __webpack_exports__["default"] = (__webpack_require__.p + "images/ballantines.jpg");
 
 /***/ }),
 
@@ -55173,16 +55184,6 @@ function valueEqual(a, b) {
 
 /* harmony default export */ __webpack_exports__["default"] = (valueEqual);
 
-
-/***/ }),
-
-/***/ "./src/public/blendedDrinks/ballantines.jpg":
-/*!**************************************************!*\
-  !*** ./src/public/blendedDrinks/ballantines.jpg ***!
-  \**************************************************/
-/***/ (function() {
-
-throw new Error("Module parse failed: Unexpected character '�' (1:0)\nYou may need an appropriate loader to handle this file type, currently no loaders are configured to process this file. See https://webpack.js.org/concepts#loaders\n(Source code omitted for this binary file)");
 
 /***/ }),
 

@@ -47,12 +47,22 @@ const rulesForJpeg = {
     outputPath: 'images'
   }
 }
+
+const rulesForJpg = {
+  test: /\.jpg$/,
+  loader: 'file-loader',
+  options: {
+    name: '[name].[ext]',
+    outputPath: 'images'
+  }
+}
+
 const rulesForFonts = {
   test: /\.(woff|woff2|ttf|eot)$/,
   type: 'asset/resource'
 }
 
-const rules = [ruleForJavaScript, ruleForStyles, rulesForPng, rulesForSvg, rulesForFonts, rulesForJpeg]
+const rules = [ruleForJavaScript, ruleForStyles, rulesForPng, rulesForSvg, rulesForFonts, rulesForJpeg, rulesForJpg]
 
 module.exports = (env, argv) => {
   const { mode } = argv

@@ -25,7 +25,7 @@ export const orderReducer = (state = initialState, action) => {
     const itemId = action.payload
     const newState = {
       ...state,
-      items: state.filter(item => item.id !== itemId)
+      items: state.items.filter(item => item.id !== itemId)
     }
     window.localStorage.setItem('currentOrder', JSON.stringify(newState))
     return newState
